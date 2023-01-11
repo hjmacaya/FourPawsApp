@@ -27,14 +27,14 @@ puts "Vets created successfully"
 
 # AnimalTypes seeds
 puts "Creating AnimalTypes..."
-dog = AnimalType.create(type: "dog")
-cat = AnimalType.create(type: "cat")
-fish = AnimalType.create(type: "fish")
-rabbit = AnimalType.create(type: "rabbit")
-ferret = AnimalType.create(type: "ferret")
-horse = AnimalType.create(type: "horse")
-bird = AnimalType.create(type: "bird")
-hamster = AnimalType.create(type: "hamster")
+dog = AnimalType.create(animal_type: "dog")
+cat = AnimalType.create(animal_type: "cat")
+fish = AnimalType.create(animal_type: "fish")
+rabbit = AnimalType.create(animal_type: "rabbit")
+ferret = AnimalType.create(animal_type: "ferret")
+horse = AnimalType.create(animal_type: "horse")
+bird = AnimalType.create(animal_type: "bird")
+hamster = AnimalType.create(animal_type: "hamster")
 puts "Animal type created successfully"
 
 # Owners seeds
@@ -56,14 +56,14 @@ puts "Pets created successfully"
 
 # RecordType Seeds
 puts "Creating record types..."
-record_type_1 = RecordType.create(type: 'exam')
-record_type_2 = RecordType.create(type: 'vaccine')
-record_type_3 = RecordType.create(type: 'recipe')
+record_type_1 = RecordType.create(record_type: 'exam')
+record_type_2 = RecordType.create(record_type: 'vaccine')
+record_type_3 = RecordType.create(record_type: 'recipe')
 puts "Record types created successfully"
 
 # Records seeds
 puts "Creating records"
-rec_1 = Records.create(name: "Bimba Vaccine", observation: "Bimba had her firs vaccine", date: Date.new(2022, 12, 10), vet_id: vet_1.id, pet_id: bimba.id, record_type_id: record_type_2.id)
-rec_2 = Records.create(name: "Pato el pez Exam", observation: "Pato el pez blood exam", date: Date.new(2022, 12, 3), vet_id: vet_2.id, pet_id: pato_pez.id, record_type_id: record_type_1.id)
-rec_3 = Records.create(name: "Lupe recipe", observation: "Lupe had her bravecto recipe", date: Date.new(2022, 12, 5), vet_id: vet_3.id, pet_id: lupe.id, record_type_id: record_type_3.id)
+rec_1 = Record.create(name: "Bimba Vaccine", observation: "Bimba had her firs vaccine", date: Date.new(2022, 12, 10), vet_id: vet_1.id, pet_id: bimba.id, record_type_id: record_type_2.id)
+rec_2 = Record.create(name: "Pato el pez Exam", observation: "Pato el pez blood exam", date: Date.new(2022, 12, 3), vet_id: vet_2.id, pet_id: pato_pez.id, record_type_id: record_type_1.id)
+rec_3 = Record.create(name: "Lupe recipe", observation: "Lupe had her bravecto recipe", date: Date.new(2022, 12, 5), vet_id: vet_3.id, pet_id: lupe.id, record_type_id: record_type_3.id)
 puts "Records created successfully"
