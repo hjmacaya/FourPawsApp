@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: rgb(66, 66, 66);
+  height: 70px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,8 +13,44 @@
   margin: -15px;
 }
 
-.nav-link {
-  color: white;
+.btn-navlink {
+  background: #ffffff; /* color de fondo */
+  color: #000000; /* color de fuente */
+  padding: 16px 20px;
+  border-radius: 50px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.btn-navlink:before, .btn-navlink:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  background-color: #000000; /* color de fondo hover */
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-navlink:after {
+  left: 100%;
+}
+.btn-navlink:hover {
+  color: rgb(255, 255, 255); /* color de fuente hover */
+}
+.btn-navlink:hover:before {
+  left: 0;
+}
+.btn-navlink:hover:after {
+  left: 50%;
 }
 
 .navbar {

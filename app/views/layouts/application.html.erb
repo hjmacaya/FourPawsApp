@@ -10,9 +10,11 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
+  <body style = "background-image: linear-gradient(rgba(240,240,240,0.9),rgba(240,240,240,0.9)),url(https://thumbs.dreamstime.com/b/modelo-incons%C3%BAtil-de-la-cl%C3%ADnica-veterinaria-124775629.jpg)";>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
+
 </html>
