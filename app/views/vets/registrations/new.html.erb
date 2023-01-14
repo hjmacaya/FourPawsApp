@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="row my-4">
+
+    <div class="col-6 text-center">
+      <%= image_tag "vet-sign-up.png", class: "sign-up-img" %>
+    </div>
+
+    <div class="col-6 shadow-lg border">
+      <div class="my-3 mx-2">
+        <h2>Sign up</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+
+          <%= f.association :veterinary, collection: Veterinary.all.map{|veterinary| [veterinary.name, veterinary.id]}, prompt: "Selecciona una veterinaria" %>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= render "vets/shared/links" %>
+    </div>
+
+  </div>
+
+</div>

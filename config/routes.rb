@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     sessions: 'owners/sessions'
   }
   devise_for :vets, path: 'vets', controllers: {
-    sessions: 'vets/sessions'
+    sessions: 'vets/sessions',
+    registrations: 'vets/registrations'
   }
   # eg. http://localhost:3000/vets/sign_in
   devise_for :users, path: 'users'
