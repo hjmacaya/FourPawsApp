@@ -1,7 +1,29 @@
 // Specific CSS for your home-page
-.background {
-}
-
 .card-body1 {
   font-size: 20px;
+}
+
+.card {
+  box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
+  -webkit-box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
+  -moz-box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
+  background-color: rgb(244, 243, 243);
+  opacity: 90%;
+}
+
+.pets {
+  float: right;
+}
+
+.card-footer {
+  background-color: rgb(220, 220, 220);
+}
+
+.ppaws {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+p {
+  font-weight: 150;
 }
