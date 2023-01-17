@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def vet_home
+  end
 end
