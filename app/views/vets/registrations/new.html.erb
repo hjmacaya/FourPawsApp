@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="row my-4" data-controller="vet-signup">
+
+    <div class="col-md-12 col-6 text-center">
+      <%= image_tag "vet-sign-up.png", class: "sign-up-img" %>
+    </div>
+
+    <div class="col-md-12 col-6 shadow-lg border rounded" data-vet-signup-target="steps">
+      <div class="my-3 mx-2">
+        <h2>Registro</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="step">
+            <h3> Información login </h3>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+
+          <div class="step">
+            <h3> Información veterinaria </h3>
+            <%= f.association :veterinary, collection: Veterinary.all.map{|veterinary| [veterinary.name, veterinary.id]}, prompt: "Selecciona una veterinaria" %>
+            <%= f.input :specialty,
+                        required: true,
+                        autofocus: true %>
+          </div>
+
+          <div class="step">
+            <h3> Información adicional </h3>
+            <%= f.input :name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "name" } %>
+            <%= f.input :phone_number,
+                        required: true,
+                        hint: "+569 XXXXXXXX",
+                        autofocus: true %>
+            <%= f.input :address,
+                        required: true,
+                        autofocus: true %>
+          </div>
+
+
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+
+      <ul class="pagination pagination-lg justify-content-center">
+        <li class="page-item active"><span class="page-link">1</span></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
