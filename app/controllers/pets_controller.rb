@@ -1,14 +1,17 @@
 class PetsController < ApplicationController
+  skip_before_action :authenticate_user!
+  before_action :authenticate_owner!, only: %i[new create destroy]
   def new
     @pet = Pet.new
   end
 
   def create
     @pet = Pet.new(pet_params)
+    @pet.owner = current_owner
     if @pet.save
-      redirect_to @pet
+      redirect_to pet_path(@pet)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
