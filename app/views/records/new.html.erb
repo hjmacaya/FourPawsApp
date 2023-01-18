@@ -1,2 +1,24 @@
-<h1>Records#new</h1>
-<p>Find me in app/views/records/new.html.erb</p>
+<% if current_vet %>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 shadow container-edit">
+          <h3>Add a new record for <%= @pet.name %></h3>
+          <%= simple_form_for [@pet, @record] do |f| %>
+            <%= f.input :name, placeholder: "Record name" %>
+            <%= f.association :record_type, collection: RecordType.all.map{|record| [record.record_type, record.id]}, prompt: "Select a type of record"%>
+            <%= f.input :date, placeholder: "Record date" %>
+            <%= f.input :observation, placeholder: "Observations" %>
+            <%= f.input :image, as: :file, label: "Record image (optional)" %>
+            <%= f.submit %>
+          <% end  %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h1>You are not logged in as an Vet!</h1>
+  <div class="alert alert-primary" role="alert">
+    You are not logged in as an Vet!
+  </div>
+<% end %>
