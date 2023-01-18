@@ -3,17 +3,21 @@
 }
 
 // Hide all steps by default
-.steps {
-  // display: none;
+.step {
+  display: none;
 }
 
-// Make circles to indicate the steps
-.page-item {
-
+// Hide Atras button by default
+#prevBtn {
+  display: none;
 }
 
 // Hide submit bottom by default
 .form-actions {
+  display: none;
+}
+
+#signupBtn {
   display: none;
 }
 
