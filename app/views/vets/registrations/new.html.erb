@@ -8,7 +8,7 @@
 
     <div class="col-6 shadow-lg border rounded" data-vet-signup-target="steps">
       <div class="my-3 mx-2">
-        <h2>Registro</h2>
+        <h2>Registro Vets</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
           <%= f.error_notification %>
@@ -26,15 +26,20 @@
                         label: "Contraseña" %>
             <%= f.input :password_confirmation,
                         required: true,
-                        input_html: { autocomplete: "new-password" } %>
+                        input_html: { autocomplete: "new-password" },
+                        label: "Confirma contraseña" %>
           </div>
 
           <div class="step">
             <h3> Información veterinaria </h3>
-            <%= f.association :veterinary, collection: Veterinary.all.map{|veterinary| [veterinary.name, veterinary.id]}, prompt: "Selecciona una veterinaria" %>
+            <%= f.association :veterinary,
+                              collection: Veterinary.all.map{|veterinary| [veterinary.name, veterinary.id]},
+                              prompt: "Selecciona una veterinaria",
+                              label: "Veterinaria" %>
             <%= f.input :specialty,
                         required: true,
-                        autofocus: true %>
+                        autofocus: true,
+                        label: "Especialidad" %>
           </div>
 
           <div class="step">
@@ -42,14 +47,17 @@
             <%= f.input :name,
                         required: true,
                         autofocus: true,
-                        input_html: { autocomplete: "name" } %>
+                        input_html: { autocomplete: "name" },
+                        label: "Nombre" %>
             <%= f.input :phone_number,
                         required: true,
                         hint: "+569 XXXXXXXX",
-                        autofocus: true %>
+                        autofocus: true,
+                        label: "Número de contacto" %>
             <%= f.input :address,
                         required: true,
-                        autofocus: true %>
+                        autofocus: true,
+                        label: "Dirección" %>
           </div>
 
           <div class="d-flex justify-content-center gap-2">

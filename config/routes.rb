@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :owners, path: 'owners', controllers: {
-    sessions: 'owners/sessions'
+    sessions: 'owners/sessions',
+    registrations: 'owners/registrations'
   }
   devise_for :vets, path: 'vets', controllers: {
     sessions: 'vets/sessions',
