@@ -1,2 +1,30 @@
-<h1>Records#index</h1>
-<p>Find me in app/views/records/index.html.erb</p>
+<% if current_vet %>
+  <h2><%= @current_veterinary.name %> records</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pet</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @records.each_with_index do |record, index|  %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= record.pet.name %></td>
+        <td><%= record.name %></td>
+        <td><%= record.record_type.record_type %></td>
+        <td><%= record.date %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h1>You are not logged in as an Vet!</h1>
+  <div class="alert alert-primary" role="alert">
+    You are not logged in as an Vet!
+  </div>
+<% end %>
