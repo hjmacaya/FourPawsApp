@@ -32,7 +32,15 @@
         <% else %>
         <div class="nav-item">
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "btn-navlink" %>
+
+            <% if current_vet %>
+              <%= link_to "Logout", destroy_vet_session_path, data: {turbo_method: :delete}, class: "btn-navlink" %>
+            <% elsif current_owner %>
+              <%= link_to "Logout", destroy_owner_session_path, data: {turbo_method: :delete}, class: "btn-navlink" %>
+            <% else %>
+              <%= link_to "Login", new_user_session_path, class: "btn-navlink" %>
+            <% end %>
+
           </li>
         </div>
         <% end %>
