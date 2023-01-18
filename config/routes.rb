@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   get 'record_types/index', to: 'record_types#index'
   get 'animal_types/index', to: 'animal_types#index'
   resources :pets do
-    resources :records
+    resources :records, only: %i[new create]
   end
+  resources :records, only: %i[show index]
 end
 #Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
 #¿Y nestear pets dentro de owners? Yo creo que sí.
