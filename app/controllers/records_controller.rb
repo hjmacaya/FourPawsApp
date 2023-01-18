@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+  skip_before_action :authenticate_user!
   def new
     @record = Record.new
   end

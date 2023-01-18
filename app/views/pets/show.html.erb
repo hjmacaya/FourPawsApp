@@ -1,2 +1,10 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<div class="card mx-5 my-5" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @pet.name %></h5>
+    <p class="card-text"><%= @pet.animal_type.animal_type %></p>
+    <% if current_owner  %>
+      <%= link_to "Edit information", edit_pet_path(@pet), class: "btn btn-primary" %>
+    <% end  %>
+  </div>
+</div>
