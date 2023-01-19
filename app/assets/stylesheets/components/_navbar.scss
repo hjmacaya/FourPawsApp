@@ -17,6 +17,7 @@
   margin-top: 10px;
   display: flex;
   gap: 100px;
+  margin-left: -350px;
 }
 
 .btn-navlink {
@@ -62,4 +63,8 @@
 .navbar {
   padding: 0px;
   opacity: 0.9;
+}
+
+#LoginPET {
+  margin-right: -400px;
 }
