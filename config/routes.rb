@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get 'vet_home', to: 'pages#vet_home'
+  get 'login_view', to: 'pages#login_view'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
