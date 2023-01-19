@@ -4,5 +4,5 @@ class Owner < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :phone_number, presence: true, uniqueness: true, allow_blank: false
+  #validates :phone_number, presence: true, uniqueness: true, allow_blank: false
 end

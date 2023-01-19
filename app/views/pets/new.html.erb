@@ -1,0 +1,25 @@
+<% if current_owner  %>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 shadow container-edit">
+          <h3>Add your pet!</h3>
+          <%= simple_form_for @pet do |f| %>
+            <%= f.input :name, placeholder: "Your pet's name" %>
+            <%= f.association :animal_type, collection: AnimalType.all.map{|animal| [animal.animal_type, animal.id]} ,prompt: "Select a type of animal"%>
+            <%= f.input :image, as: :file, label: "Add an image of your pet (optional)" %>
+            <%= f.input :birthdate, placeholder: "Your pet's birthdate (optional)" %>
+            <%= f.input :weight, placeholder: "Your pet's weight (optional)" %>
+            <%= f.input :pet_chip, placeholder: "Your pet's chip number (optional)" %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h1>You are not logged in as an Owner!</h1>
+  <div class="alert alert-primary" role="alert">
+    You are not logged in as an Owner!
+  </div>
+<% end %>
