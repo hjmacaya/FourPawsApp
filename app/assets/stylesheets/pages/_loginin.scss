@@ -1,0 +1,54 @@
+.form-actions {
+  color: white;
+}
+
+.login {
+  margin-left: 10px;
+}
+
+.login-card-link {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s linear;
+}
+
+.login-card-link:hover {
+  color: black;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.login-card {
+  height: 200px;
+  width: 200px;
+
+  border: 3px solid black;
+  border-radius: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+
+  transition: 0.5s linear;
+  font-weight: bold;
+}
+
+.vet-login {
+  background-image: url(vet-login.jpg);
+}
+
+.owner-login {
+  background-image: url(owner-login.jpg);
+}
+
+.login-card:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  color: white;
+}

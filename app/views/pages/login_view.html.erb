@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="row my-4">
+
+    <div class="col-md-6 offset-md-3 text-center">
+
+
+      <h3 class="mb-5">¿Qué tipo de usuario eres?</h3>
+
+
+      <div class="d-flex flex-row justify-content-evenly">
+
+        <%# card for vets %>
+        <a href="<%= new_vet_session_path %>" class="login-card-link">
+          <div class="login-card vet-login">
+            Veterinari@s
+          </div>
+        </a>
+
+        <%# card for owners %>
+        <a href="<%= new_owner_session_path %>" class="login-card-link">
+          <div class="login-card owner-login">
+            Dueñ@s de mascotas
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
