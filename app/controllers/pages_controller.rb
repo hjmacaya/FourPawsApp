@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home login_view]
+  skip_before_action :authenticate_user!, only: %i[home login_view signup_view]
 
   def home
   end
@@ -8,5 +8,8 @@ class PagesController < ApplicationController
   end
 
   def login_view
+  end
+
+  def signup_view
   end
 end

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get 'login_view', to: 'pages#login_view'
+  get 'signup_view', to: 'pages#signup_view'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
