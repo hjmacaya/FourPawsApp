@@ -39,9 +39,9 @@ puts "Animal type created successfully"
 
 # Owners seeds
 puts "Creating owners seeds..."
-owner_1 = Owner.create(email: 'first@gmail.com', password: '12345678', name: 'First', last_name: 'Macaya', address: 'España 12', phone_number: '11112222')
-owner_2 = Owner.create(email: 'second@gmail.com', password: '12345678', name: 'Second', last_name: 'Bianculli', address: 'Argentina 20', phone_number: '33334444')
-owner_3 = Owner.create(email: 'third@gmail.com', password: '12345678', name: 'Third', last_name: 'Maiza', address: 'Camino la fuente 1475', phone_number: '55556666')
+owner_1 = Owner.create(email: 'first@gmail.com', password: '12345678', name: 'Braulio', last_name: 'Macaya', address: 'España 12', phone_number: '11112222')
+owner_2 = Owner.create(email: 'second@gmail.com', password: '12345678', name: 'Raul', last_name: 'Bianculli', address: 'Argentina 20', phone_number: '33334444')
+owner_3 = Owner.create(email: 'third@gmail.com', password: '12345678', name: 'Josefina', last_name: 'Maiza', address: 'Camino la fuente 1475', phone_number: '55556666')
 puts "Owners created successfully"
 
 # Pets Seeds

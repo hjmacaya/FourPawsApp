@@ -1,0 +1,39 @@
+<% if current_vet %>
+  <div class="container1">
+      <div class="barra">
+          <img class ="img" src="https://cdn.pixabay.com/photo/2017/04/15/04/36/incognito-2231825_960_720.png">
+          Pedro
+          <div class="link1">
+          Registros
+          </div>
+          <div class="link">
+          Veterinaria
+          </div>
+          <div class="link">
+          <%= link_to "Añadir mascota", attend_new_pet_path, style: "text-decoration: none; color: black" %>
+          </div>
+          <div class="link">
+          Mascotas
+          atendidas
+          </div>
+      </div>
+      <div class="cuadro">
+          <div class="partealta">
+          Mascotas Atendidas
+          <form class="formulario" action="../../form-result.php" method="post" target="_blank">
+              <p>
+              Búsqueda de mascota: <input type="search" name="busquedademascota" placeholder="Ingrese nombre PET">
+              <input type="submit" value="Buscar">
+            </p>
+          </form>
+          </div>
+          <% current_vet.records.each do |record| %>
+            <div class="pet1">
+                <img class ="img1" src="https://cdn.pixabay.com/photo/2017/04/15/04/36/incognito-2231825_960_720.png"><%= record.pet.name %>
+                <img class ="img2" src="https://i.postimg.cc/8zPvRV65/png-transparent-arrow-icon-download-icon-thumbnail-removebg-preview.png">
+            </div>
+          <% end %>
+          </div>
+      </div>
+  </div>
+<% end %>
