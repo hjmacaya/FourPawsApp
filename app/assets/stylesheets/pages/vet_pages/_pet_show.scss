@@ -1,0 +1,52 @@
+
+
+.pet-show-avatar {
+  padding: 5px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  width: 150px; /* Ancho de la imagen */
+  height: 150px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen al tamaño especificado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.pet-show-img {
+  padding: 5px;
+  width: 150px; /* Ancho de la imagen */
+  height: 150px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen al tamaño especificado */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+.section1 {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.section1 li {
+  display: inline-block;
+  margin: 5px;
+}
+.button1 {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 14px 20px; /* Espaciado interno */
+  margin: 8px 0; /* Espaciado externo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  width: 100%; /* Ancho completo */
+  font-size: 18px; /* Tamaño de la fuente */
+  border-radius: 10px;
+}
+.button1:active {
+  background-color: #3e8e41;
+}
+
+p {
+  padding: 5px;
+  font-size: 18px; /* Tamaño de la fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+  font-family: Arial, sans-serif; /* Fuente */
+  color: #333; /* Color del texto */
+  text-align: justify; /* Alineación del texto */
+  margin-bottom: 1em; /* Espaciado debajo del párrafo */
+}

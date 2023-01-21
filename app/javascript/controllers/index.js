@@ -10,6 +10,9 @@ application.register("hello", HelloController)
 import OwnerSignupController from "./owner_signup_controller"
 application.register("owner-signup", OwnerSignupController)
 
+import PetShowController from "./pet_show_controller"
+application.register("pet-show", PetShowController)
+
 import SidebarButtonsController from "./sidebar_buttons_controller"
 application.register("sidebar-buttons", SidebarButtonsController)
 

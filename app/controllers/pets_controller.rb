@@ -21,6 +21,16 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    birthdate = @pet.birthdate
+    today = Date.today
+    age_years = today.year - birthdate.year
+    age_months = today.month - birthdate.month
+    if age_months.negative?
+      age_years -= 1
+      age_months = 12 - age_months.abs
+    end
+    @age_months = age_months
+    @age_years = age_years
   end
 
   def edit
