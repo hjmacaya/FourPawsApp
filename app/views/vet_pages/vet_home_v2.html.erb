@@ -1,0 +1,63 @@
+<div class="wrapper" data-controller="sidebar-buttons">
+
+  <%# Sidebar %>
+  <nav id="sidebar">
+
+    <div class="sidebar-header text-center">
+      <%# profile img %>
+      <%= image_tag "vet-login.jpg", class: "vet-home-img" %>
+      <h3> <%= current_vet.name %> </h3>
+    </div>
+
+    <ul class="list-unstyled components" data-sidebar-buttons-target="btnList">
+      <li class="active">
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="recordsView">Registros</button>
+      </li>
+      <li>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="veterinaryView">Veterinaria</button>
+      </li>
+      <li>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="petsView">Mascotas</button>
+      </li>
+      <li>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="mydataView">Mascotas</button>
+      </li>
+      <li>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="mydataView">Mi cuenta</button>
+      </li>
+    </ul>
+
+  </nav>
+
+  <%# Page content %>
+  <div class="container" id="content" data-sidebar-buttons-target="divContent">
+
+    <div id="recordsView" class="content-view d-none my-4 mx-3">
+      <%= render "vet_pages/attended_pets" %>
+    </div>
+
+    <div id="veterinaryView" class="content-view d-none my-4 mx-3">
+      Testttt
+    </div>
+
+    <div id="petsView" class="content-view d-none my-4 mx-3">
+      <%= render "vet_pages/attended_pets" %>
+    </div>
+  </div>
+
+</div>
