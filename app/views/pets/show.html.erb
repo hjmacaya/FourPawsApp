@@ -34,7 +34,29 @@
           </div>
         </div>
         <div data-pet-show-target="records", class="d-none", id="records">
-          <p>Registros</p>
+            <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Veterinario</th>
+              <th scope="col">Registro</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @pet.records.each_with_index do |record, index|  %>
+            <tr>
+              <th scope="row"><%= index + 1 %></th>
+              <td><%= record.vet.name %></td>
+              <td><%= record.name %></td>
+              <td><%= record.record_type.record_type %></td>
+              <td><%= record.date %></td>
+              <td><%= link_to "editar", record_path(record) %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
         </div>
         <div data-pet-show-target="appointments", class="d-none", id="appointments">
           <p>Citas</p>
