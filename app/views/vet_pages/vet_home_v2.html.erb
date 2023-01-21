@@ -3,9 +3,10 @@
   <%# Sidebar %>
   <nav id="sidebar">
 
-    <div class="sidebar-header">
+    <div class="sidebar-header text-center">
       <%# profile img %>
-      <h3> Vet Home </h3>
+      <%= image_tag "vet-login.jpg", class: "vet-home-img" %>
+      <h3> <%= current_vet.name %> </h3>
     </div>
 
     <ul class="list-unstyled components" data-sidebar-buttons-target="btnList">
@@ -25,19 +26,23 @@
         <button type="button"
                 class="sidebar-btn"
                 data-action="click->sidebar-buttons#showView"
-                data-sidebar-buttons-viewToShow-param="petsView"
-                data-sidebar-buttons-n-param="2">Mascotas</button>
+                data-sidebar-buttons-viewToShow-param="petsView">Mascotas</button>
       </li>
       <li>
-        <a href="">Holaa</a>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="mydataView">Mascotas</button>
       </li>
       <li>
-          <a href="#">Contact</a>
+        <button type="button"
+                class="sidebar-btn"
+                data-action="click->sidebar-buttons#showView"
+                data-sidebar-buttons-viewToShow-param="mydataView">Mi cuenta</button>
       </li>
     </ul>
 
   </nav>
-
 
   <%# Page content %>
   <div class="container" id="content" data-sidebar-buttons-target="divContent">

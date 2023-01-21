@@ -1,7 +1,7 @@
 <div class="d-flex gap-5">
   <% current_vet.records.each do |record| %>
     <a href="">
-      <div class="card" style="width: 200px;">
+      <div class="card shadow" style="width: 200px;">
         <%= image_tag "owner-login" %>
         <div class="card-body">
           <h5 class="card-title"><%= record.pet.name %></h5>

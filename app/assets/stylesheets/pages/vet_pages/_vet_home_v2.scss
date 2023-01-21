@@ -4,6 +4,13 @@
   align-items: stretch;
 }
 
+.vet-home-img {
+  border-radius: 50%;
+  size: cover;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
 #sidebar.active {
   margin-left: -250px;
 }
@@ -33,6 +40,13 @@ a[data-toggle="collapse"] {
 // STYLING
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+// set the colors
+:root {
+  --primary-color: #607EAA;
+  --secondary-color: #144272;
+  --terciary-color: #fff;
+}
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -50,7 +64,7 @@ a, a:hover, a:focus {
 
 .sidebar-btn {
   display: block;
-  background-color: #7386D5;
+  background-color: var(--primary-color);
   color: #fafafa;
   width: 100%;
   padding: 10px 0px 10px 0px;
@@ -64,55 +78,55 @@ a, a:hover, a:focus {
 }
 
 .sidebar-btn:hover {
-  color: #7386D5;
-  background: #fff;
+  color: var(--primary-color);
+  background: var(--terciary-color);
 }
 
 .sidebar-btn.active {
-  color: #7386D5;
-  background: #fff;
+  color: var(--primary-color);
+  background: var(--terciary-color);
 }
 
 #sidebar {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-    background: #7386D5;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--terciary-color);
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: var(--secondary-color);
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 #sidebar ul p {
-    color: #fff;
+    color: var(--terciary-color);
     padding: 10px;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
+// #sidebar ul li a {
+//     padding: 10px;
+//     font-size: 1.1em;
+//     display: block;
+// }
+// #sidebar ul li a:hover {
+//     color: var(--primary-color);
+//     background: var(--terciary-color);
+// }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: var(--terciary-color);
+    background: var(--secondary-color);
 }
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: var(--secondary-color);
 }
