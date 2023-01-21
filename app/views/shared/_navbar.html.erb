@@ -28,12 +28,6 @@
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
-        <% else %>
-        <%# <div class="nav-item">
-          <li class="nav-item">
-            <%= link_to "Login as PET", new_user_session_path, class: "btn-navlink" %>
-        <%#  </li>
-        </div> %>
         <% end %>
       </ul>
     </div>
@@ -57,11 +51,13 @@
         <% else %>
         <div class="nav-item">
           <li class="nav-item">
- <% if current_vet %>
+            <% if current_vet %>
+              <%= link_to "Home", vet_home_path, class: "btn-navlink" %>
               <%= link_to "Logout", destroy_vet_session_path, data: {turbo_method: :delete}, class: "btn-navlink" %>
             <% elsif current_owner %>
               <%= link_to "Logout", destroy_owner_session_path, data: {turbo_method: :delete}, class: "btn-navlink" %>
             <% else %>
+              <%= link_to "Sign Up", signup_view_path, class: "btn-navlink" %>
               <%= link_to "Login", login_view_path, class: "btn-navlink" %>
             <% end %>
           </li>

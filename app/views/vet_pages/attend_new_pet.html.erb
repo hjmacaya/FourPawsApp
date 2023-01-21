@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <% @pets.each do |pet| %>
+        <div class="pet1">
+          <img class ="img1" src="https://cdn.pixabay.com/photo/2017/04/15/04/36/incognito-2231825_960_720.png">Pet: <%= pet.name %>  Owner: <%= pet.owner.name %>
+          <%= link_to "Crear nuevo registro", new_pet_record_path(pet), style: "text-decoration: none; color: green"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
