@@ -5,6 +5,8 @@ export default class extends Controller {
   static targets = ["btnList", "divContent"]
 
   connect() {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   }
 
   showView(event) {
