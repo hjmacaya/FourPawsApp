@@ -75,6 +75,8 @@ a, a:hover, a:focus {
   line-height: 1.7em;
   text-align: start;
   text-indent: 9px;
+
+  transition: 0.4s;
 }
 
 .sidebar-btn:hover {
@@ -129,4 +131,15 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: var(--secondary-color);
+}
+
+.sidebar-icon {
+  color: var(--terciary-color);
+  background: none;
+  border: none;
+  transition: 0.4s;
+}
+
+.sidebar-icon:hover {
+  opacity: 50%;
 }
