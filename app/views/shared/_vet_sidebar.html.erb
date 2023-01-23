@@ -42,6 +42,32 @@
       </li>
     </ul>
 
+    <div class="d-flex flex-row justify-content-center gap-5 mt-5">
+      <button type="button"
+              class="sidebar-icon"
+              data-bs-toggle="tooltip"
+              data-bs-title="Inicio"
+              data-bs-placement="top"
+              data-action="click->sidebar-buttons#showView"
+              data-sidebar-buttons-viewToShow-param="homeView"><i class="fa-solid fa-house fa-lg"></i></button>
+
+      <button type="button"
+              class="sidebar-icon"
+              data-bs-toggle="tooltip"
+              data-bs-title="Cuenta"
+              data-bs-placement="top"
+              data-action="click->sidebar-buttons#showView"
+              data-sidebar-buttons-viewToShow-param="mydataView"><i class="fa-solid fa-user fa-lg"></i></button>
+
+      <%= link_to raw("<i class=\"fa-solid fa-arrow-right-from-bracket fa-lg\"></i>"),
+                  destroy_vet_session_path,
+                  data: {turbo_method: :delete},
+                  class: "sidebar-icon",
+                  "data-bs-toggle" => "tooltip",
+                  "data-bs-placement" => "top",
+                  "data-bs-title" => "Cerrar sesión"%>
+    </div>
+
   </nav>
 
   <%# Page content %>
@@ -57,6 +83,10 @@
 
     <div id="petsView" class="content-view d-none my-4 mx-3">
       <%= render "vet_pages/attended_pets" %>
+    </div>
+
+    <div id="homeView" class="content-view d-none my-4 mx-3">
+      <%= render "pages/home" %>
     </div>
   </div>
 
