@@ -13,5 +13,8 @@ application.register("owner-signup", OwnerSignupController)
 import PetShowController from "./pet_show_controller"
 application.register("pet-show", PetShowController)
 
+import SidebarButtonsController from "./sidebar_buttons_controller"
+application.register("sidebar-buttons", SidebarButtonsController)
+
 import VetSignupController from "./vet_signup_controller"
 application.register("vet-signup", VetSignupController)
