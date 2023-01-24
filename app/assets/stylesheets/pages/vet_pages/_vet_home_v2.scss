@@ -89,13 +89,12 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
   min-width: 250px;
   max-width: 250px;
-  min-height: 100vh;
-  // z-index: 999;
+  height: 100vh;
   background: var(--primary-color);
   color: var(--terciary-color);
   transition: all 0.3s;
