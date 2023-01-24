@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   get 'vet_home', to: 'vet_pages#vet_home'
   get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
+
 end
 #Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
 #¿Y nestear pets dentro de owners? Yo creo que sí.
