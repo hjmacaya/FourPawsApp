@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   resources :pets do
     resources :records, only: %i[new create]
   end
-  resources :records, only: %i[show index]
+  resources :records, only: %i[show index edit update destroy]
 
   get 'vet_home', to: 'vet_pages#vet_home'
   get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
