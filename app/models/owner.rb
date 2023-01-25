@@ -5,4 +5,7 @@ class Owner < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   #validates :phone_number, presence: true, uniqueness: true, allow_blank: false
+
+  # Ataching a img
+  has_one_attached :photo
 end
