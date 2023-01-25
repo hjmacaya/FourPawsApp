@@ -14,19 +14,17 @@ export default class extends Controller {
     this.removeActive()
     event.currentTarget.classList.add("active")
 
-
-
     // Second we hide all views
-    let views = document.querySelectorAll(".content-view")
-    views.forEach(div => {
-      if (!div.classList.contains("d-none")) {
-        this.hideElement(div)
-      }
-    })
+    // let views = document.querySelectorAll(".content-view")
+    // views.forEach(div => {
+    //   if (!div.classList.contains("d-none")) {
+    //     this.hideElement(div)
+    //   }
+    // })
 
-    // Then, we show the view that was clicked
-    let selectedDiv = document.getElementById(event.params.viewtoshow)
-    selectedDiv.classList.remove("d-none")
+    // // Then, we show the view that was clicked
+    // let selectedDiv = document.getElementById(event.params.viewtoshow)
+    // selectedDiv.classList.remove("d-none")
   }
 
   hideElement(element) {
