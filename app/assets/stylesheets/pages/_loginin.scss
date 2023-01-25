@@ -1,6 +1,20 @@
+.textcard {
+  color: black;
+  font-weight: bold;
+  margin-top: -200px;
+}
+
 .form-actions {
   color: white;
 }
+
+.vistalog {
+  text-align: center;
+  align-items: center;
+  border: solid;
+  border-color: black;
+}
+
 
 .login {
   margin-left: 10px;
@@ -35,14 +49,15 @@
 
   transition: 0.5s linear;
   font-weight: bold;
+
 }
 
 .vet-login {
-  background-image: url(vet-login.jpg);
+  background-image: url(vet-login2.png);
 }
 
 .owner-login {
-  background-image: url(owner-login.jpg);
+  background-image: url(owner-login2.png);
 }
 
 .login-card:hover {

@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   get 'owner_pages/owner_home'
   devise_for :owners, path: 'owners', controllers: {
     sessions: 'owners/sessions',
-    registrations: 'owners/registrations'
+    registrations: 'owners/registrations',
+    passwords: 'owners/passwords'
   }
   devise_for :vets, path: 'vets', controllers: {
     sessions: 'vets/sessions',
-    registrations: 'vets/registrations'
+    registrations: 'vets/registrations',
+    passwords: 'vets/passwords'
   }
   # eg. http://localhost:3000/vets/sign_in
   devise_for :users, path: 'users'
@@ -30,6 +32,7 @@ Rails.application.routes.draw do
 
   get 'vet_home', to: 'vet_pages#vet_home'
   get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
+
 end
 #Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
 #¿Y nestear pets dentro de owners? Yo creo que sí.

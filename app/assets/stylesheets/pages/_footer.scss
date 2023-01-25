@@ -1,7 +1,11 @@
 .iconos {
   font-size: 35px;
   margin-top: -15px;
-  padding: 35px;
+  padding: 40px;
+}
+
+.icon:hover {
+  color: rgb(0, 0, 142);
 }
 
 .icon {
@@ -22,5 +26,16 @@
   color: white;
   font-size: 20px;
   position: center ;
-  margin-top: 5 px;
+  margin-top: 15px;
+}
+
+.footlinks a {
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+  font-size: 15px;
+}
+
+.footlinks a:hover {
+  color: rgb(0, 0, 142);
 }
