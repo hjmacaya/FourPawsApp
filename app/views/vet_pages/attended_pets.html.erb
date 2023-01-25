@@ -1,13 +1,14 @@
+<h1>Estas son las mascotas que has atendido, <%= current_vet.name %></h1>
 <div class="d-flex gap-5">
-  <% current_vet.records.each do |record| %>
-    <a href="">
+  <% current_vet.pets.each do |pet| %>
+    <%= link_to pet_path(pet) do %>
       <div class="card shadow" style="width: 200px;">
         <%= image_tag "owner-login" %>
         <div class="card-body">
-          <h5 class="card-title"><%= record.pet.name %></h5>
-          <p>Dueño: <%= record.pet.owner.name %></p>
+          <h5 class="card-title"><%= pet.name %></h5>
+          <p>Dueño: <%= pet.owner.name %></p>
         </div>
       </div>
-    </a>
+    <% end %>
   <% end %>
 </div>

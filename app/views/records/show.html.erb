@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Registro Médico de <%= @pet.name %> </h1>
-  <div class="registro-mascota">
+  <div class="card">
+    <h4>Nombre: <p><%= @record.name %></p></h4>
     <h5>Fecha: <p><%= @record.date %></p></h5>
     <h5>Observación: <p><%= @record.observation %></p></h5>
     <p>Registro creado por <%= @record.vet.name %>, de la veterinaria <%= @record.vet.veterinary.name %></p>
