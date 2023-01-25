@@ -1,5 +1,5 @@
 <div class="container my-auto">
-  <div class="card col-8 mx-auto">
+  <div class="card col-10 mx-auto my-10">
     <div class="row">
       <img
         src="https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg"
@@ -34,7 +34,31 @@
           </div>
         </div>
         <div data-pet-show-target="records", class="d-none", id="records">
-          <p>Registros</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Veterinario</th>
+                <th scope="col">Registro</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col"> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @pet.records.each_with_index do |record, index|  %>
+                <tr>
+                  <th scope="row"><%= index + 1 %></th>
+                  <td><%= record.vet.name %></td>
+                  <td><%= record.name %></td>
+                  <td><%= record.record_type.record_type %></td>
+                  <td><%= record.date %></td>
+                  <td><%= link_to "Ver", record_path(record) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <%= link_to "Añadir registro", new_pet_record_path(@pet), class: "button1 mx-auto" %>
         </div>
         <div data-pet-show-target="appointments", class="d-none", id="appointments">
           <p>Citas</p>

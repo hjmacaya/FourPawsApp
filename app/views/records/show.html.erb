@@ -1,2 +1,9 @@
-<h1>Records#show</h1>
-<p>Find me in app/views/records/show.html.erb</p>
+<div class="container">
+  <h1>Registro Médico</h1>
+  <div class="registro-mascota">
+    <h2>Nombre: <span> <%= @pet.name %></span></h2>
+    <p>Fecha: <span><%= @record.date %></span></p>
+    <p>Observación: <span><%= @record.observation %></span></p>
+    <img src="" alt="Imagen de la mascota">
+  </div>
+</div>
