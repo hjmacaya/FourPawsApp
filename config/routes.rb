@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get 'login_view', to: 'pages#login_view'
+  get 'signup_view', to: 'pages#signup_view'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -29,6 +31,8 @@ Rails.application.routes.draw do
   resources :records, only: %i[show index]
 
   get 'vet_home', to: 'vet_pages#vet_home'
+  get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
+
 end
 #Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
 #¿Y nestear pets dentro de owners? Yo creo que sí.
