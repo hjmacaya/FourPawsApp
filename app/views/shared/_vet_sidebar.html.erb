@@ -5,7 +5,7 @@
 
     <div class="sidebar-header text-center">
       <%# profile img %>
-      <%= image_tag "vet-login.jpg", class: "vet-home-img" %>
+      <%= cl_image_tag current_vet.photo.key, crop: "fill", class: "vet-home-img" %>
       <h3> <%= current_vet.name %> </h3>
     </div>
 

@@ -42,7 +42,7 @@ class Vets::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[veterinary_id specialty name phone_number address])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[veterinary_id specialty name phone_number address photo])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
