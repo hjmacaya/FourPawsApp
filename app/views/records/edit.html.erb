@@ -1,2 +1,24 @@
-<h1>Records#edit</h1>
-<p>Find me in app/views/records/edit.html.erb</p>
+<% if current_vet %>
+<div class="card">
+  <h2>Nombre: <span> <%= @pet.name %></span></h2>
+  <%= form_for @record do |f| %>
+  <div>
+    <h5>Nombre del registro:</h5>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <h5>Fecha:</h5>
+    <%= f.text_field :date %>
+  </div>
+  <div>
+    <h5>Observación:</h5>
+    <%= f.text_field :observation %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+  <p>Registro creado por <%= @record.vet.name %>, de la veterinaria <%= @record.vet.veterinary.name %></p>
+  <img src="" alt="Imagen de la mascota">
+<div>
+<% else %>
+<h1>No estás logueado como Veterinario!</h1>
+<% end %>
