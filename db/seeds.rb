@@ -13,16 +13,38 @@ puts "Creating Veterinaries..."
 veterinary_1 = Veterinary.create(name: "4 Patitas", address: "Camino la fuente 1475")
 veterinary_2 = Veterinary.create(name: "2 patitas", address: "Noruega 6444")
 veterinary_3 = Veterinary.create(name: "La quinta pata del gato", address: "Juan Montalvo 75")
+veterinary_4 = Veterinary.create(name: "Veterinaria Oriente", address: "Avenida las Condes 7703")
+veterinary_5 = Veterinary.create(name: "SOS Buin Zoo", address: "Panamericana Sur Km 32")
+
 puts "Veterinaries created successfully"
 
 # Vets seeds
 puts "Creating Vets..."
-vet_1 = Vet.create(email: "primero@gmail.com", password: "123123", name: "Primero", address: "Warren Smith 67", phone_number: "77778888", specialty: "Radiologist", veterinary_id: veterinary_1.id)
-vet_2 = Vet.create(email: "segundo@gmail.com", password: "123123", name: "Segundo", address: "Warren Smith 47", phone_number: "88889999", specialty: "General Medicine", veterinary_id: veterinary_2.id)
-vet_3 = Vet.create(email: "tercero@hotmail.com", password: "123123", name: "Tercero", address: "Holanda 47", phone_number: "11112222", specialty: "Surgeon", veterinary_id: veterinary_3.id)
-# vet_4 = Vet.create(email: "", password: "", name: "", address: "", phone_number: "", specialty: "", veterinary_id: vet_1.id)
-# vet_5 = Vet.create(email: "", password: "", name: "", address: "", phone_number: "", specialty: "", veterinary_id: vet_1.id)
-# vet_6 = Vet.create(email: "", password: "", name: "", address: "", phone_number: "", specialty: "", veterinary_id: vet_1.id)
+vet_1 = Vet.create(email: "braulio@gmail.com", password: "123123", name: "Braulio", address: "Warren Smith 67", phone_number: "77778888", specialty: "Radiografía", veterinary_id: veterinary_1.id)
+vet_2 = Vet.create(email: "luis_alberto@gmail.com", password: "123123", name: "Luis", address: "Warren Smith 47", phone_number: "88889999", specialty: "Medicina General", veterinary_id: veterinary_2.id)
+vet_3 = Vet.create(email: "paola@hotmail.com", password: "123123", name: "Paola", address: "Holanda 47", phone_number: "11112222", specialty: "Cirugía", veterinary_id: veterinary_3.id)
+vet_4 = Vet.create(email: "claudia@hotmail.com", password: "123123", name: "Claudia", address: "Gotemburgo 67", phone_number: "12345678", specialty: "Medicina General", veterinary_id: veterinary_1.id)
+vet_5 = Vet.create(email: "roberto@hotmail.com", password: "123123", name: "Roberto", address: "Oslo 330", phone_number: "11234567", specialty: "Medicina General", veterinary_id: veterinary_1.id)
+vet_6 = Vet.create(email: "teresa@gmail.com", password: "123123", name: "Teresa", address: "Estocolmo 334", phone_number: "11134567", specialty: "Cirugía", veterinary_id: veterinary_1.id)
+vet_7 = Vet.create(email: "nicolas@gmail.com", password: "123123", name: "Nicolas", address: "Estocolmo 257", phone_number: "11114567", specialty: "Dermatología", veterinary_id: veterinary_1.id)
+vet_8 = Vet.create(email: "gregorio@gmail.com", password: "123123", name: "Gregorio", address: "Jutlandia 456", phone_number: "11111567", specialty: "Traumatología", veterinary_id: veterinary_2.id)
+vet_9 = Vet.create(email: "aurora@gmail.com", password: "123123", name: "Aurora", address: "Bergen 393", phone_number: "11111167", specialty: "Radiografía", veterinary_id: veterinary_2.id)
+vet_10 = Vet.create(email: "pilar@gmail.com", password: "123123", name: "Pilar", address: "Upasala 360", phone_number: "11111122", specialty: "Medicina General", veterinary_id: veterinary_2.id)
+vet_11 = Vet.create(email: "domingo@gmail.com", password: "123123", name: "Domingo", address: "Los Militares 6668", phone_number: "11119999", specialty: "Cirugía", veterinary_id: veterinary_2.id)
+vet_12 = Vet.create(email: "margarita@gmail.com", password: "123123", name: "Margarita", address: "Bergen 165", phone_number: "11119998", specialty: "Medicina General", veterinary_id: veterinary_3.id)
+vet_13 = Vet.create(email: "juan_pablo@gmail.com", password: "123123", name: "Juan Pablo", address: "La Piedad 69", phone_number: "11119997", specialty: "Traumatología", veterinary_id: veterinary_3.id)
+vet_14 = Vet.create(email: "jaime@gmail.com", password: "123123", name: "Jaime", address: "Las Trinitarias 7181", phone_number: "11119996", specialty: "Medicina General", veterinary_id: veterinary_3.id)
+vet_15 = Vet.create(email: "maria@gmail.com", password: "123123", name: "Maria", address: "Las Trinitarias 7180", phone_number: "11119995", specialty: "Dermatología", veterinary_id: veterinary_3.id)
+vet_16 = Vet.create(email: "jessica@gmail.com", password: "123123", name: "Jessica", address: "Las Clarisas 352", phone_number: "11119994", specialty: "Medicina General", veterinary_id: veterinary_4.id)
+vet_17 = Vet.create(email: "mauricio@gmail.com", password: "123123", name: "Mauricio", address: "Los Arados 7408", phone_number: "11119993", specialty: "Medicina General", veterinary_id: veterinary_4.id)
+vet_18 = Vet.create(email: "facundo@gmail.com", password: "123123", name: "Facundo", address: "Montes Claros 7474", phone_number: "11119992", specialty: "Cirugía", veterinary_id: veterinary_4.id)
+vet_19 = Vet.create(email: "eugenia@gmail.com", password: "123123", name: "Eugenia", address: "La Oración 290", phone_number: "11119991", specialty: "Cirugía", veterinary_id: veterinary_4.id)
+vet_20 = Vet.create(email: "natalia@gmail.com", password: "123123", name: "Natalia", address: "Rosario Norte 615", phone_number: "11119990", specialty: "Dermatología", veterinary_id: veterinary_4.id)
+vet_21 = Vet.create(email: "ricardo@gmail.com", password: "123123", name: "Ricardo", address: "Pío XI 505", phone_number: "11119989", specialty: "Medicina General", veterinary_id: veterinary_5.id)
+vet_22 = Vet.create(email: "emilio@gmail.com", password: "123123", name: "Emilio", address: "La Gloria 120", phone_number: "11119979", specialty: "Radiografía", veterinary_id: veterinary_5.id)
+vet_23 = Vet.create(email: "valentina@gmail.com", password: "123123", name: "Valentina", address: "Los Militares 4885", phone_number: "11119969", specialty: "Radiografía", veterinary_id: veterinary_5.id)
+vet_24 = Vet.create(email: "mariana@gmail.com", password: "123123", name: "Mariana", address: "Porto Alegre 68", phone_number: "11119959", specialty: "Traumatología", veterinary_id: veterinary_5.id)
+vet_25 = Vet.create(email: "fernando@gmail.com", password: "123123", name: "Fernando", address: "La Castellana Norte 44 ", phone_number: "11119949", specialty: "Cirugía", veterinary_id: veterinary_5.id)
 puts "Vets created successfully"
 
 # AnimalTypes seeds
