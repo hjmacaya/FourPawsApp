@@ -1,15 +1,17 @@
 // Specific CSS for your home-page
-.card-body1 {
-  font-size: 20px;
+.card-body1 p {
+  font-size: 25px;
+  text-align: center;
 }
 
-// .card {
-//   box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
-//   -webkit-box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
-//   -moz-box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
-//   background-color: rgb(237, 237, 237);
-//   opacity: 95%;
-// }
+.cardhome {
+  box-shadow: 10px 11px 17px 5px rgba(0,0,0,0.91);
+  -webkit-box-shadow: 10px 11px 17px 5px rgba(173, 173, 173, 0.91);
+  -moz-box-shadow: 10px 11px 17px 5px rgba(172, 172, 172, 0.91);
+  background-color: rgb(208, 208, 208);
+  opacity: 95%;
+  background-color: transparent;
+}
 
 .pets {
   float: right;
@@ -24,6 +26,7 @@
 .ppaws {
   font-weight: 400;
   font-size: 20px;
+  color: black;
 }
 
 p {
@@ -32,4 +35,6 @@ p {
 
 .card-text {
   font-size: 25px;
+  position: center;
+  color: black;
 }
