@@ -15,9 +15,9 @@
       <%= render "shared/vet_sidebar" %>
     <% else %>
       <%= render "shared/navbar" %>
+      <%= render "shared/flashes" %>
+      <%= yield %>
     <% end %>
-    <%= render "shared/flashes" %>
-    <%= yield %>
   </body>
     <%= render "shared/footer" %>
 </html>

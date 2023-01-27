@@ -30,6 +30,7 @@ class RecordsController < ApplicationController
 
   def edit
     @record = Record.find(params[:id])
+    @pet = @record.pet
   end
 
   def update

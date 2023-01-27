@@ -1,9 +1,15 @@
 <div class="container">
-  <h1>Registro Médico</h1>
-  <div class="registro-mascota">
-    <h2>Nombre: <span> <%= @pet.name %></span></h2>
-    <p>Fecha: <span><%= @record.date %></span></p>
-    <p>Observación: <span><%= @record.observation %></span></p>
+  <h1>Registro Médico de <%= @pet.name %> </h1>
+  <div class="card">
+    <h4>Nombre: <p><%= @record.name %></p></h4>
+    <h5>Fecha: <p><%= @record.date %></p></h5>
+    <h5>Observación: <p><%= @record.observation %></p></h5>
+    <p>Registro creado por <%= @record.vet.name %>, de la veterinaria <%= @record.vet.veterinary.name %></p>
     <img src="" alt="Imagen de la mascota">
+  </div>
+  <div>
+  <% if current_vet && @record.vet == current_vet %>
+    <button><%= link_to "editar", edit_record_path(@record) %></button>
+  <% end %>
   </div>
 </div>
