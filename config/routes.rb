@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get 'veterinaries/index', to: 'veterinaries#index'
+  resources :veterinaries, only: %i[index show]
   get 'record_types/index', to: 'record_types#index'
   get 'animal_types/index', to: 'animal_types#index'
   resources :pets do
@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   get 'vet_home', to: 'vet_pages#vet_home'
   get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
   get 'attended_pets', to: 'vet_pages#attended_pets'
-
 end
 #Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
 #¿Y nestear pets dentro de owners? Yo creo que sí.
