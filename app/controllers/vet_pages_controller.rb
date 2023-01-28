@@ -12,6 +12,10 @@ class VetPagesController < ApplicationController
   end
 
   def attended_pets
+    @pets = []
+    current_vet.pets.each do |pet|
+      @pets.append(pet) unless @pets.include?(pet)
+    end
   end
 
   def show_vets
