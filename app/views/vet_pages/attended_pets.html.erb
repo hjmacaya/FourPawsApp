@@ -5,8 +5,9 @@
       <div class="card shadow" style="width: 200px;">
         <%= cl_image_tag pet.photo.key, :height => 250, :crop => "fill", class: "card-img-top" %>
         <div class="card-body">
+        <div class="pet-body">
           <h5 class="card-title"><%= pet.name %></h5>
-          <p>Dueño: <%= pet.owner.name %></p>
+          <p><u>Dueño:</u> <%= pet.owner.name %></p>
         </div>
       </div>
     <% end %>
