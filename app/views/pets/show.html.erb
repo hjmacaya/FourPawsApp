@@ -1,11 +1,7 @@
 <div class="container my-auto">
   <div class="card col-8 mx-auto my-8">
     <div class="row">
-      <img
-        src="https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg"
-        alt=""
-        class="pet-show-avatar col-6"
-        >
+      <%= cl_image_tag @pet.photo.key, class: "pet-show-avatar col-6" %>
       <h1 class="col-6 my-auto"><%= @pet.name %></h1>
     </div>
     <div data-controller="pet-show">
