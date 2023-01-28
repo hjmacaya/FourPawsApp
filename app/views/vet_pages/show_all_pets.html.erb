@@ -1,0 +1,19 @@
+<div class="contianer m-3">
+
+  <div class="d-flex flex-row flex-wrap justify-content-center gap-3">
+
+    <% @pets.each do |pet| %>
+
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag pet.photo.key, :height => 250, :crop => "fill", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title"><%= pet.name %></h5>
+          <p>Es la mascota de <strong><%= "#{pet.owner.name} #{pet.owner.last_name}" %></strong> y es un <strong><%= pet.animal_type.animal_type %></strong></p>
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

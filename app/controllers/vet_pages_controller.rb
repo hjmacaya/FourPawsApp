@@ -17,4 +17,8 @@ class VetPagesController < ApplicationController
   def show_vets
     @vets = Vet.all
   end
+
+  def show_all_pets
+    @pets = Pet.all
+  end
 end

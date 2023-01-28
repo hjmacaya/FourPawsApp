@@ -251,8 +251,8 @@ centella.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'cen
 rayo.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'rayo.jpg')),
                   filename: "rayo.jpg",
                   content_type: "image/jpg")
-consentida.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'consentida.jpg')),
-                  filename: "consentida.jpg",
+consentida.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'horse.jpg')),
+                  filename: "horse.jpg",
                   content_type: "image/jpg")
 chica.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'chica.jpg')),
                   filename: "chica.jpg",
