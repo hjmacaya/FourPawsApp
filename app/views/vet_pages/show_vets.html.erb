@@ -1,0 +1,19 @@
+<div class="contianer m-3">
+
+  <div class="d-flex flex-row flex-wrap justify-content-center gap-3">
+
+    <% @vets.each do |vet| %>
+
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag vet.photo.key, :height => 250, :crop => "fill", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title"><%= vet.name %></h5>
+          <p>Trabaja en <strong style="color: black"><%= vet.veterinary.name %></strong> en el área de <strong style="color: black"><%= vet.specialty %></strong></p>
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>
