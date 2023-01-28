@@ -9,7 +9,7 @@ class VeterinariesController < ApplicationController
     veterinary_pets = []
     @veterinary.vets.each do |vet|
       vet.pets.each do |pet|
-        veterinary_pets.append(pet)
+        veterinary_pets.append(pet) unless veterinary_pets.include?(pet)
       end
     end
     @veterinary_pets = veterinary_pets
