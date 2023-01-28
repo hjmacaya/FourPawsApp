@@ -26,25 +26,19 @@
         <button type="button"
                 class="sidebar-btn"
                 data-action="click->sidebar-buttons#showView"
-                data-sidebar-buttons-viewToShow-param="veterinaryView">Veterinaria</button>
-      </li>
-      <li>
-        <button type="button"
-                class="sidebar-btn"
-                data-action="click->sidebar-buttons#showView"
                 data-sidebar-buttons-viewToShow-param="petsView">Mascotas</button>
       </li>
       <li>
         <button type="button"
                 class="sidebar-btn"
                 data-action="click->sidebar-buttons#showView"
-                data-sidebar-buttons-viewToShow-param="mydataView">Mascotas</button>
+                data-sidebar-buttons-viewToShow-param="mydataView">Mi cuenta</button>
       </li>
       <li>
-        <button type="button"
-                class="sidebar-btn"
-                data-action="click->sidebar-buttons#showView"
-                data-sidebar-buttons-viewToShow-param="mydataView">Mi cuenta</button>
+        <%= link_to "Atender una mascota +",
+                    attend_new_pet_path,
+                    class: "sidebar-btn",
+                    "data-action" => "click->sidebar-buttons#showView" %>
       </li>
     </ul>
 
