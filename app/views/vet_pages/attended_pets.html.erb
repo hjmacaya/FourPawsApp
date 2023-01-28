@@ -4,9 +4,9 @@
     <%= link_to pet_path(pet) do %>
       <div class="card shadow" style="width: 200px;">
         <%= image_tag "owner-login" %>
-        <div class="card-body">
+        <div class="pet-body">
           <h5 class="card-title"><%= pet.name %></h5>
-          <p>Dueño: <%= pet.owner.name %></p>
+          <p><u>Dueño:</u> <%= pet.owner.name %></p>
         </div>
       </div>
     <% end %>
