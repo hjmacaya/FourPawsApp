@@ -13,5 +13,12 @@ class VeterinariesController < ApplicationController
       end
     end
     @veterinary_pets = veterinary_pets
+    records = []
+    @veterinary.vets.each do |vet|
+      vet.records.each do |record|
+        records.append(record) unless records.include?(record)
+      end
+    end
+    @records = records
   end
 end
