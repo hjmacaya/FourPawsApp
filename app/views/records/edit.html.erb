@@ -1,4 +1,5 @@
-<div class="container">
+<% if current_vet %>
+<div class="card">
   <h2>Nombre: <span> <%= @pet.name %></span></h2>
   <%= form_for @record do |f| %>
   <div>
@@ -18,3 +19,6 @@
   <p>Registro creado por <%= @record.vet.name %>, de la veterinaria <%= @record.vet.veterinary.name %></p>
   <img src="" alt="Imagen de la mascota">
 <div>
+<% else %>
+<h1>No estás logueado como Veterinario!</h1>
+<% end %>

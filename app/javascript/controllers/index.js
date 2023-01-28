@@ -18,3 +18,6 @@ application.register("sidebar-buttons", SidebarButtonsController)
 
 import VetSignupController from "./vet_signup_controller"
 application.register("vet-signup", VetSignupController)
+
+import VeterinaryViewController from "./veterinary_view_controller"
+application.register("veterinary-view", VeterinaryViewController)

@@ -27,7 +27,7 @@
   margin: 5px;
 }
 .button1{
-  background-color: #4CAF50; /* Color de fondo */
+  background-color: var(--primary-color); /* Color de fondo */
   color: white; /* Color del texto */
   padding: 14px 20px; /* Espaciado interno */
   margin: 8px 0; /* Espaciado externo */
@@ -38,7 +38,7 @@
   border-radius: 10px;
 }
 .button1:active {
-  background-color: #3e8e41;
+  background-color: var(--secondary-color);
 }
 
 p {
