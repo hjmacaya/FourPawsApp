@@ -17,6 +17,12 @@
                     "data-action" => "click->sidebar-buttons#showView" %>
       </li>
       <li>
+        <%= link_to "Veterinaria",
+                    veterinary_path(current_vet.veterinary),
+                    class: "sidebar-btn",
+                    "data-action" => "click->sidebar-buttons#showView" %>
+      </li>
+      <li>
         <button type="button"
                 class="sidebar-btn"
                 data-action="click->sidebar-buttons#showView"
