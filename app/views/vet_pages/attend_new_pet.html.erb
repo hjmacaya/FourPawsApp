@@ -1,18 +1,22 @@
 <h1>Elige la Mascota que quieres atender</h1>
 <div class="my-4 p-2 rounded-pill border border-2" style="background-color: var(--primary-color);">
   <nav class="navbar bg-body-tertiary">
+
     <div class="container-fluid">
       <a class="navbar-brand text-white">Buscador de mascotas</a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
+      <%= form_with url: attend_new_pet_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Busca una mascota"%>
+        <%= submit_tag "Buscar", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </nav>
 </div>
 <div class="d-flex gap-5 flex-wrap">
   <% @pets.each do |pet| %>
-    <%= link_to new_pet_record_path(pet) do %>
+    <%= link_to pet_path(pet) do %>
       <div class="card shadow" style="width: 200px;">
         <%= cl_image_tag pet.photo.key, :height => 250, :crop => "fill", class: "card-img-top" %>
         <div class="card-body">
