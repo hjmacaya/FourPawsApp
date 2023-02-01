@@ -62,81 +62,81 @@ vet_25 = Vet.create(email: "fernando@gmail.com", password: "123123", name: "Fern
 puts "Vets created successfully"
 
 puts "Adding img to vets"
-vet_1.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h30.jpg')),
-                  filename: "vet_h30.jpg",
-                  content_type: "image/jpg")
-vet_2.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h31.jpg')),
-                  filename: "vet_h31.jpg",
-                  content_type: "image/jpg")
-vet_3.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m30.png')),
-                  filename: "vet_m30.png",
-                  content_type: "image/png") #M
-vet_4.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m31.jpg')),
-                  filename: "vet_m31.jpg",
-                  content_type: "image/jpg") #M
-vet_5.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h32.jpg')),
-                  filename: "vet_h32.jpg",
-                  content_type: "image/jpg")
-vet_6.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m32.jpg')),
-                  filename: "vet_m32.jpg",
-                  content_type: "image/jpg") #M
-vet_7.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h33.jpg')),
-                  filename: "vet_h33.jpg",
-                  content_type: "image/jpg")
-vet_8.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h34.jpg')),
-                  filename: "vet_h34.jpg",
-                  content_type: "image/jpg")
-vet_9.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m33.jpg')),
-                  filename: "vet_m33.jpg",
-                  content_type: "image/jpg") #M
-vet_10.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m34.jpg')),
-                  filename: "vet_m34.jpg",
-                  content_type: "image/jpg") #M
-vet_11.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h35.jpg')),
-                  filename: "vet_h35.jpg",
-                  content_type: "image/jpg")
-vet_12.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m35.jpg')),
-                  filename: "vet_m35.jpg",
-                  content_type: "image/jpg") #M
-vet_13.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h36.jpg')),
-                  filename: "vet_h36.jpg",
-                  content_type: "image/jpg")
-vet_14.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h37.jpg')),
-                  filename: "vet_h37.jpg",
-                  content_type: "image/jpg")
-vet_15.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m36.jpg')),
-                  filename: "vet_m36.jpg",
-                  content_type: "image/jpg") #M
-vet_16.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m37.jpg')),
-                  filename: "vet_m37.jpg",
-                  content_type: "image/jpg") #M
-vet_17.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h38.jpg')),
-                  filename: "vet_h38.jpg",
-                  content_type: "image/jpg")
-vet_18.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h42.jpg')),
-                  filename: "vet_h42.jpg",
-                  content_type: "image/jpg")
-vet_19.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m38.jpg')),
-                  filename: "vet_m38.jpg",
-                  content_type: "image/jpg") #M
-vet_20.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m39.jpg')),
-                  filename: "vet_m39.jpg",
-                  content_type: "image/jpg") #M
-vet_21.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h39.jpg')),
-                  filename: "vet_h39.jpg",
-                  content_type: "image/jpg")
-vet_22.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h40.jpg')),
-                  filename: "vet_h40.jpg",
-                  content_type: "image/jpg")
-vet_23.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m40.jpg')),
-                  filename: "vet_m40.jpg",
-                  content_type: "image/jpg") #M
-vet_24.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m41.jpg')),
-                  filename: "vet_m41.jpg",
-                  content_type: "image/jpg") #M
-vet_25.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h41.jpg')),
-                  filename: "vet_h41.jpg",
-                  content_type: "image/jpg")
+# vet_1.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h30.jpg')),
+#                   filename: "vet_h30.jpg",
+#                   content_type: "image/jpg")
+# vet_2.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h31.jpg')),
+#                   filename: "vet_h31.jpg",
+#                   content_type: "image/jpg")
+# vet_3.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m30.png')),
+#                   filename: "vet_m30.png",
+#                   content_type: "image/png") #M
+# vet_4.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m31.jpg')),
+#                   filename: "vet_m31.jpg",
+#                   content_type: "image/jpg") #M
+# vet_5.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h32.jpg')),
+#                   filename: "vet_h32.jpg",
+#                   content_type: "image/jpg")
+# vet_6.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m32.jpg')),
+#                   filename: "vet_m32.jpg",
+#                   content_type: "image/jpg") #M
+# vet_7.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h33.jpg')),
+#                   filename: "vet_h33.jpg",
+#                   content_type: "image/jpg")
+# vet_8.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h34.jpg')),
+#                   filename: "vet_h34.jpg",
+#                   content_type: "image/jpg")
+# vet_9.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m33.jpg')),
+#                   filename: "vet_m33.jpg",
+#                   content_type: "image/jpg") #M
+# vet_10.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m34.jpg')),
+#                   filename: "vet_m34.jpg",
+#                   content_type: "image/jpg") #M
+# vet_11.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h35.jpg')),
+#                   filename: "vet_h35.jpg",
+#                   content_type: "image/jpg")
+# vet_12.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m35.jpg')),
+#                   filename: "vet_m35.jpg",
+#                   content_type: "image/jpg") #M
+# vet_13.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h36.jpg')),
+#                   filename: "vet_h36.jpg",
+#                   content_type: "image/jpg")
+# vet_14.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h37.jpg')),
+#                   filename: "vet_h37.jpg",
+#                   content_type: "image/jpg")
+# vet_15.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m36.jpg')),
+#                   filename: "vet_m36.jpg",
+#                   content_type: "image/jpg") #M
+# vet_16.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m37.jpg')),
+#                   filename: "vet_m37.jpg",
+#                   content_type: "image/jpg") #M
+# vet_17.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h38.jpg')),
+#                   filename: "vet_h38.jpg",
+#                   content_type: "image/jpg")
+# vet_18.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h42.jpg')),
+#                   filename: "vet_h42.jpg",
+#                   content_type: "image/jpg")
+# vet_19.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m38.jpg')),
+#                   filename: "vet_m38.jpg",
+#                   content_type: "image/jpg") #M
+# vet_20.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m39.jpg')),
+#                   filename: "vet_m39.jpg",
+#                   content_type: "image/jpg") #M
+# vet_21.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h39.jpg')),
+#                   filename: "vet_h39.jpg",
+#                   content_type: "image/jpg")
+# vet_22.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h40.jpg')),
+#                   filename: "vet_h40.jpg",
+#                   content_type: "image/jpg")
+# vet_23.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m40.jpg')),
+#                   filename: "vet_m40.jpg",
+#                   content_type: "image/jpg") #M
+# vet_24.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_m41.jpg')),
+#                   filename: "vet_m41.jpg",
+#                   content_type: "image/jpg") #M
+# vet_25.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Vets', 'vet_h41.jpg')),
+#                   filename: "vet_h41.jpg",
+#                   content_type: "image/jpg")
 puts "Vets images attached successfully"
 
 # AnimalTypes seeds
@@ -218,79 +218,79 @@ gusgus = Pet.create(name: "Gus-Gus", birthdate: Date.new(2020, 7, 7), weight: 0.
 puts "Pets created successfully"
 
 puts "Adding profile images to the pets"
-lupe.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'lupe.jpg')),
-                  filename: "lupe.jpg",
-                  content_type: "image/jpg")
-bolt.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'bolt.jpg')),
-                  filename: "bolt.jpg",
-                  content_type: "image/jpg")
-tango.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'tango.jpg')),
-                  filename: "tango.jpg",
-                  content_type: "image/jpg")
-maya.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'maya.jpg')),
-                  filename: "maya.jpg",
-                  content_type: "image/jpg")
-rodolfa.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'rodolfa.jpg')),
-                  filename: "rodolfa.jpg",
-                  content_type: "image/jpg")
-pipa.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'pipa.jpg')),
-                  filename: "pipa.jpg",
-                  content_type: "image/jpg")
-bimba.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'bimba.jpg')),
-                  filename: "bimba.jpg",
-                  content_type: "image/jpg")
-sultan.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'sultan.jpg')),
-                  filename: "sultan.jpg",
-                  content_type: "image/jpg")
-agatha.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'agatha.png')),
-                  filename: "agatha.png",
-                  content_type: "image/png")
-centella.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'centella.jpg')),
-                  filename: "centella.jpg",
-                  content_type: "image/jpg")
-rayo.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'rayo.jpg')),
-                  filename: "rayo.jpg",
-                  content_type: "image/jpg")
-consentida.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'horse.jpg')),
-                  filename: "horse.jpg",
-                  content_type: "image/jpg")
-chica.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'chica.jpg')),
-                  filename: "chica.jpg",
-                  content_type: "image/jpg")
-garfield.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'garfield.jpg')),
-                  filename: "garfield.jpg",
-                  content_type: "image/jpg")
-thor.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'thor.jpg')),
-                  filename: "thor.jpg",
-                  content_type: "image/jpg")
-zuki.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zuki.jpg')),
-                  filename: "zuki.jpg",
-                  content_type: "image/jpg")
-zoka.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zoka.jpg')),
-                  filename: "zoka.jpg",
-                  content_type: "image/jpg")
+# lupe.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'lupe.jpg')),
+#                   filename: "lupe.jpg",
+#                   content_type: "image/jpg")
+# bolt.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'bolt.jpg')),
+#                   filename: "bolt.jpg",
+#                   content_type: "image/jpg")
+# tango.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'tango.jpg')),
+#                   filename: "tango.jpg",
+#                   content_type: "image/jpg")
+# maya.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'maya.jpg')),
+#                   filename: "maya.jpg",
+#                   content_type: "image/jpg")
+# rodolfa.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'rodolfa.jpg')),
+#                   filename: "rodolfa.jpg",
+#                   content_type: "image/jpg")
+# pipa.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'pipa.jpg')),
+#                   filename: "pipa.jpg",
+#                   content_type: "image/jpg")
+# bimba.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'bimba.jpg')),
+#                   filename: "bimba.jpg",
+#                   content_type: "image/jpg")
+# sultan.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'sultan.jpg')),
+#                   filename: "sultan.jpg",
+#                   content_type: "image/jpg")
+# agatha.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'agatha.png')),
+#                   filename: "agatha.png",
+#                   content_type: "image/png")
+# centella.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'centella.jpg')),
+#                   filename: "centella.jpg",
+#                   content_type: "image/jpg")
+# rayo.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'rayo.jpg')),
+#                   filename: "rayo.jpg",
+#                   content_type: "image/jpg")
+# consentida.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'horse.jpg')),
+#                   filename: "horse.jpg",
+#                   content_type: "image/jpg")
+# chica.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'chica.jpg')),
+#                   filename: "chica.jpg",
+#                   content_type: "image/jpg")
+# garfield.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'garfield.jpg')),
+#                   filename: "garfield.jpg",
+#                   content_type: "image/jpg")
+# thor.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'thor.jpg')),
+#                   filename: "thor.jpg",
+#                   content_type: "image/jpg")
+# zuki.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zuki.jpg')),
+#                   filename: "zuki.jpg",
+#                   content_type: "image/jpg")
+# zoka.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zoka.jpg')),
+#                   filename: "zoka.jpg",
+#                   content_type: "image/jpg")
 
-zuko.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zuko.jpg')),
-                  filename: "zuko.jpg",
-                  content_type: "image/jpg")
-nala.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'nala.jpg')),
-                  filename: "nala.jpg",
-                  content_type: "image/jpg")
-pato.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'pato.jpg')),
-                  filename: "pato.jpg",
-                  content_type: "image/jpg")
-sara.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'sara.jpg')),
-                  filename: "sara.jpg",
-                  content_type: "image/jpg")
-moka.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'moka.jpg')),
-                  filename: "moka.jpg",
-                  content_type: "image/jpg")
-lucifer.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'lucifer.jpg')),
-                  filename: "lucifer.jpg",
-                  content_type: "image/jpg")
-gusgus.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'gusgus.jpg')),
-                  filename: "gusgus.jpg",
-                  content_type: "image/jpg")
+# zuko.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'zuko.jpg')),
+#                   filename: "zuko.jpg",
+#                   content_type: "image/jpg")
+# nala.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'nala.jpg')),
+#                   filename: "nala.jpg",
+#                   content_type: "image/jpg")
+# pato.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'pato.jpg')),
+#                   filename: "pato.jpg",
+#                   content_type: "image/jpg")
+# sara.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'sara.jpg')),
+#                   filename: "sara.jpg",
+#                   content_type: "image/jpg")
+# moka.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'moka.jpg')),
+#                   filename: "moka.jpg",
+#                   content_type: "image/jpg")
+# lucifer.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'lucifer.jpg')),
+#                   filename: "lucifer.jpg",
+#                   content_type: "image/jpg")
+# gusgus.photo.attach(io: File.open(Rails.root.join('..', 'Images', 'Pets', 'gusgus.jpg')),
+#                   filename: "gusgus.jpg",
+#                   content_type: "image/jpg")
 puts "Images added successfully"
 
 # RecordType Seeds

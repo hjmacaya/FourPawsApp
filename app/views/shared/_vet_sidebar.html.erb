@@ -44,15 +44,13 @@
                   "data-bs-title" => "Inicio",
                   "data-bs-placement" => "top",
                   "data-action" => "click->sidebar-buttons#showView" %>
-
-      <button type="button"
-              class="sidebar-icon"
-              data-bs-toggle="tooltip"
-              data-bs-title="Cuenta"
-              data-bs-placement="top"
-              data-action="click->sidebar-buttons#showView"
-              data-sidebar-buttons-viewToShow-param="mydataView"><i class="fa-solid fa-user fa-lg"></i></button>
-
+      <%= link_to raw("<i class=\"fa-solid fa-user fa-lg\"></i>"),
+                  edit_vet_registration_path,
+                  class: "sidebar-icon",
+                  "data-bs-toggle"=> "tooltip",
+                  "data-bs-title" => "Cuenta",
+                  "data-bs-placement" => "top",
+                  "data-action" => "click->sidebar-buttons#showView" %>
       <%= link_to raw("<i class=\"fa-solid fa-arrow-right-from-bracket fa-lg\"></i>"),
                   destroy_vet_session_path,
                   data: {turbo_method: :delete},

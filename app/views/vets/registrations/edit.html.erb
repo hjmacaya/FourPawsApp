@@ -1,35 +1,107 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+  <div class="row my-3" data-controller="vet-edit">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+    <div class="col-md-6 offset-md-3 p-3 bg-light shadow rounded">
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+      <h2>Editar tu datos</h2>
 
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+      <div class="d-flex justify-content-center my-3">
+        <button id="loginBtn"
+                class="btn-vet-edit btn-left"
+                type="button"
+                data-action="click->vet-edit#nextStep"
+                data-vet-edit-step-param="loginView"
+                data-vet-edit-n-param=0>Login</button>
+        <button id="veterinaryBtn"
+                class="btn-vet-edit"
+                type="button"
+                data-action="click->vet-edit#nextStep"
+                data-vet-edit-step-param="veterinaryView"
+                data-vet-edit-n-param=1>Veterinaria</button>
+        <button id="additionalBtn"
+                class="btn-vet-edit btn-right"
+                type="button"
+                data-action="click->vet-edit#nextStep"
+                data-vet-edit-step-param="additionalView"
+                data-vet-edit-n-param=2>Adicionales</button>
+      </div>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }, data: { turbo: false }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+
+          <div class="step-edit">
+            <%= f.input :name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "name" },
+                        label: "Nombre" %>
+            <%= f.input :email, required: true, autofocus: true %>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+
+            <%= f.input :password,
+                        hint: "dejalo en blanco si no deseas cambiarla",
+                        required: false,
+                        input_html: { autocomplete: "new-password" },
+                        label: "Nueva contraseña" %>
+            <%= f.input :password_confirmation,
+                        required: false,
+                        input_html: { autocomplete: "new-password" },
+                        label: "Confirmación nueva contraseña" %>
+          </div>
+
+          <div id="veterinaryView" class="step-edit">
+            <%= f.association :veterinary,
+                              collection: Veterinary.all.map{|veterinary| [veterinary.name, veterinary.id]},
+                              prompt: "Selecciona una veterinaria",
+                              label: "Veterinaria" %>
+            <%= f.input :specialty,
+                        required: true,
+                        autofocus: true,
+                        label: "Especialidad" %>
+
+          </div>
+
+          <div id="addiotionalView" class="step-edit">
+            <%= f.input :phone_number,
+                        required: true,
+                        hint: "+569 XXXXXXXX",
+                        autofocus: true,
+                        label: "Número de contacto" %>
+            <%= f.input :address,
+                        required: true,
+                        autofocus: true,
+                        label: "Dirección" %>
+            <%= f.input :photo, as: :file %>
+          </div>
+
+
+          <%= f.input :current_password,
+                      hint: "necesitamos tu contraseña actual para confirmar los cambios",
+                      required: true,
+                      input_html: { autocomplete: "current-password" },
+                      label: "Contraseña actual" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Actualizar", class: "btn btn-primary rounded" %>
+        </div>
+      <% end %>
+
+      <%# <h3>Cancel my account</h3> %>
+
+      <%# <>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+
+      <%# <%= link_to "Back", :back %>
+
+    </div>
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
