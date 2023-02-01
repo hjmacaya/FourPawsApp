@@ -1,5 +1,5 @@
 <div class="container my-auto">
-  <div class="card col-10 mx-auto my-10">
+  <div class="card col-8 mx-auto my-8">
     <div class="row">
       <%= cl_image_tag @pet.photo.key, class: "pet-show-avatar col-6" %>
       <h1 class="col-6 my-auto"><%= @pet.name %></h1>
@@ -15,12 +15,12 @@
       </div>
       <div>
         <div data-pet-show-target="info", class="row d-none", id="info">
-          <div class="col-5">
-            <p>Dueño: <%= @pet.owner.name %></p>
-            <p>Edad: <%= @age_years %> años y <%= @age_months %> meses</p>
-            <p>Especie: <%= @pet.animal_type.animal_type %></p>
-            <p>Peso: <%= @pet.weight %> kg</p>
-            <p>Número de chip: <%= @pet.pet_chip %></p>
+          <div class="infopet col-5">
+            <p><u>Dueño:</u> <%= @pet.owner.name %></p>
+            <p><u>Edad:</u> <%= @age_years %> años y <%= @age_months %> meses</p>
+            <p><u>Especie:</u> <%= @pet.animal_type.animal_type %></p>
+            <p><u>Peso:</u> <%= @pet.weight %> kg</p>
+            <p><u>Número de chip:</u> <%= @pet.pet_chip %></p>
           </div>
           <div class="col-7 my-auto">
             <img src="https://img.freepik.com/iconos-gratis/lapiz_318-924522.jpg?w=2000"
@@ -49,16 +49,17 @@
                   <td><%= record.name %></td>
                   <td><%= record.record_type.record_type %></td>
                   <td><%= record.date %></td>
-                  <td><%= link_to "Ver", record_path(record) %></td>
+                  <td><%= link_to "Ver", record_path(record), class: "verinfo btn btn-primary" %></td>
                 </tr>
               <% end %>
             </tbody>
           </table>
+        <%= link_to "Añadir registro", new_pet_record_path(@pet), class: "button2 mx-auto mr-3" %>
         </div>
-        <div data-pet-show-target="appointments", class="d-none", id="appointments">
+        <div data-pet-show-target="appointments", class="infopet d-none", id="appointments">
           <p>Citas</p>
         </div>
-        <div data-pet-show-target="notifications", class="d-none", id="notifications">
+        <div data-pet-show-target="notifications", class="infopet d-none", id="notifications">
           <p>Notificaciones</p>
         </div>
       </div>
