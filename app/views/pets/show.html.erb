@@ -54,7 +54,6 @@
               <% end %>
             </tbody>
           </table>
-        <%= link_to "Añadir registro", new_pet_record_path(@pet), class: "button1 mx-auto" %>
         </div>
         <div data-pet-show-target="appointments", class="d-none", id="appointments">
           <p>Citas</p>
@@ -63,6 +62,7 @@
           <p>Notificaciones</p>
         </div>
       </div>
+      <%= link_to "Añadir registro +", new_pet_record_path(@pet), class: "button1 mx-auto" %>
     </div>
   </div>
 </div>

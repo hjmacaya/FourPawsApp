@@ -80,3 +80,6 @@ end
 
 # Cloudinary for images
 gem "cloudinary"
+
+# Search
+gem "pg_search"

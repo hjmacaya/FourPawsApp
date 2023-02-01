@@ -5,7 +5,11 @@ class VetPagesController < ApplicationController
   end
 
   def attend_new_pet
-    @pets = Pet.all
+    if params[:query].present?
+      @pets = Pet.search_by_name(params[:query])
+    else
+      @pets = Pet.all
+    end
   end
 
   def vet_home_v2
