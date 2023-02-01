@@ -16,6 +16,9 @@ application.register("pet-show", PetShowController)
 import SidebarButtonsController from "./sidebar_buttons_controller"
 application.register("sidebar-buttons", SidebarButtonsController)
 
+import VetEditController from "./vet_edit_controller"
+application.register("vet-edit", VetEditController)
+
 import VetSignupController from "./vet_signup_controller"
 application.register("vet-signup", VetSignupController)
 
