@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'appointments/index'
+  get 'appointments/show'
+  get 'appointments/new'
+  get 'appointments/create'
+  get 'appointments/update'
+  get 'appointments/edit'
+  get 'appointments/destroy'
   get 'vet_pages/vet_home'
   get 'owner_pages/owner_home'
   devise_for :owners, path: 'owners', controllers: {
@@ -36,7 +43,8 @@ Rails.application.routes.draw do
   get 'show_vets', to: 'vet_pages#show_vets'
   get 'show_all_pets', to: 'vet_pages#show_all_pets'
 
+  resources :appointments
+  get 'new_appointment_1', to: 'owner_pages#new_appointment_1'
+  get 'new_appointment_2/:veterinary', to: 'owner_pages#new_appointment_2', as: "new_appointment_2"
+  get 'new_appointment_3/:vet', to: 'owner_pages#new_appointment_3', as: "new_appointment_3"
 end
-#Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
-#¿Y nestear pets dentro de owners? Yo creo que sí.
-#¿Nestear records dentro de record_types?

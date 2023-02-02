@@ -1,0 +1,12 @@
+.new_appointment_h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.vets_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1em;
+  margin-bottom: 4em;
+}
