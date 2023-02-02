@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @appointments = Appointment.all
   end
@@ -9,6 +10,7 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
+    @vet = Vet.find(params[:vet])
   end
 
   def create

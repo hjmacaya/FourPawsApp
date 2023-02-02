@@ -1,20 +1,14 @@
-import flatpickr from "flatpickr";
 import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="calendar"
 export default class extends Controller {
+  static targets = [ "date", "output" ]
   connect() {
-    flatpickr(this.input, {
-      enableTime: true,
-      onChange: this.onChange.bind(this),
-      inline: true,
-      mode: "range",
-      dateFormat: "Y-m-d H:i"
-    });
+    console.log("Hello, Stimulus!", this.element)
   }
 
-  onChange(selectedDates) {
-    const startDate = selectedDates[0];
-    const endDate = selectedDates[1];
+  show_day_hours() {
+    console.log("Fecha:", this.dateTarget.textContent)
+    this.outputTarget.textContent = "Hello, Stimulus!"
   }
 }

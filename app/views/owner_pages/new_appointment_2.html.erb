@@ -2,7 +2,7 @@
   <h2 class="card-title" style="margin: 40px auto;">Elige un veterinario</h2>
   <div class="vets_container">
     <% @veterinary.vets.each do |vet| %>
-      <%= link_to new_appointment_3_path(vet) do %>
+      <%= link_to appointments_new_path(vet: vet) do %>
         <div class="card shadow">
           <%= cl_image_tag vet.photo.key, height: 220, width: 220, style: "object-fit: cover;"%>
           <div class="card-body">

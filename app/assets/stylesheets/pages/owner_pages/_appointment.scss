@@ -1,3 +1,4 @@
+@import "simple_calendar";
 .new_appointment_h1 {
   text-align: center;
   margin-top: 20px;
@@ -9,4 +10,45 @@
   justify-content: space-around;
   gap: 1em;
   margin-bottom: 4em;
+}
+
+.appointments {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carta {
+  border: 5px solid black;
+  margin: 2em;
+  padding: 5em;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.veterinario {
+
+}
+
+.calendario {
+  padding: 1em 0;
+
+}
+ .horas {
+  display: flex;
+  flex-direction: column;
+ }
+.horas .horasi {
+  border: 2px solid black;
+  padding: 1em 3em;
+  margin: 1em 0;
+  background-color: green;
+}
+
+.horas .horano {
+  border: 2px solid black;
+  padding: 1em 3em;
+  margin: 1em 0;
+  background-color: red;
 }

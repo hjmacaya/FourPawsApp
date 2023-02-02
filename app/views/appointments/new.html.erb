@@ -1,2 +1,20 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+<div class="appointments" data-controller="calendar">
+  <div class="carta veterinario">
+    <%= @vet.name %>
+  </div>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 shadow container-edit">
+          <h3>Reserva de hora</h3>
+          <%= simple_form_for @appointment, data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :start_time, as: :datetime, input_html: { data: { flatpickr_target: "startTime" } } %>
+            <%= f.input :end_time, as: :datetime, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_Time'  } %>
+            <%= f.submit 'Reservar hora', class: "btn-newgame" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

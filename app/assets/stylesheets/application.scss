@@ -10,6 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import 'flatpickr/dist/flatpickr.css';
 body {
   display: flex;
   flex-direction: column;
