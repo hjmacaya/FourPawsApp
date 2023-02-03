@@ -77,6 +77,23 @@ p {
   background-color: rgb(189, 189, 189);
   //border: 1px solid blue;
 }
+
+.button-delete {
+  background-color: red; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 14px 20px; /* Espaciado interno */
+  margin: 8px 0; /* Espaciado externo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  width: 100%; /* Ancho completo */
+  font-size: 18px; /* Tamaño de la fuente */
+  border-radius: 10px;
+}
+
+.button-delete:hover {
+  opacity: 50%;
+}
+
 .infopet p {
   color: black;
 }

@@ -1,0 +1,20 @@
+<div class="container text-center my-4">
+<div class="d-flex flex-row justify-content-between mt-3 mb-5">
+  <h3 class=""> Mascotas de <%= current_owner.name %>: </h3>
+  <%= link_to "Añadir", new_pet_path, class: "btn btn-primary rounded" %>
+</div>
+  <div class="owner-pets-cards">
+    <% @pets.each do |pet| %>
+      <%= link_to pet_path(pet) do %>
+        <div class="card shadow pet-card mb-3">
+          <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= pet.name %></h5>
+            <p>Dueño: <%= current_owner.name %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

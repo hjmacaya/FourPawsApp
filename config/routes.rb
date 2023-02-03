@@ -39,4 +39,8 @@ Rails.application.routes.draw do
   resources :appointments
   get 'new_appointment_1', to: 'owner_pages#new_appointment_1'
   get 'new_appointment_2/:veterinary', to: 'owner_pages#new_appointment_2', as: "new_appointment_2"
+
+  get 'show_owner_pets', to: 'owner_pages#show_pets'
+
+  resources :pets, only: %i[new create destroy]
 end
