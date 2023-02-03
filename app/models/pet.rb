@@ -8,6 +8,7 @@ class Pet < ApplicationRecord
   belongs_to :owner
   belongs_to :animal_type
   has_many :records
+  has_many :appointments
   # Ataching a img
   has_one_attached :photo
 

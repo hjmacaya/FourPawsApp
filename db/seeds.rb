@@ -374,3 +374,7 @@ rec_28 = Record.create(name: "Parasitos en el estomago", observation: "Dada la p
 # Gusgus
 
 puts "Records created successfully"
+
+#puts "Creating appointments"
+#appointment_1 = Appointment.create(hour: DateTime.new(2023, 1, 1, 9, 0), start_time: DateTime.new(2023, 1, 1, 9, 0), end_time: DateTime.new(2023, 1, 1, 10, 0), specialty: "medicina general", pet: lupe, vet: vet_1 )
+#puts "Appointments created succsessfully"

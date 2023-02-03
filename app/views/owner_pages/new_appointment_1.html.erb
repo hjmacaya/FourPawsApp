@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="new_appointment_h1">Selecciona la veterinaria donde quieres atender a tu mascota</h1>
+  <% @veterinaries.each do |veterinary| %>
+    <div class="card w-75 my-5 mx-auto px-10">
+      <div class="card-body text-center">
+        <h2 class="card-title"><%= veterinary.name %></h2>
+        <p class="card-text fs-5 text-center"><%= veterinary.address %></p>
+        <%= link_to "Seleccionar", new_appointment_2_path(veterinary: veterinary), class: "button1 mx-auto" %>
+      </div>
+    </div>
+  <% end %>
+</div>
