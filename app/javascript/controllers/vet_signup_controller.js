@@ -19,6 +19,7 @@ export default class extends Controller {
       document.getElementById("nextBtn").style.display = "inline"
     } else {
       document.getElementById("prevBtn").style.display = "inline"
+      document.getElementById("nextBtn").style.display = "inline"
     }
 
     if (n == (x.length - 1)) {
