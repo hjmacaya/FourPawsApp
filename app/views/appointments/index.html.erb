@@ -1,0 +1,21 @@
+<div class="calendar" data-controller="calendar">
+  <input type="text" data-target="calendar.input" data-action="flatpickr">
+  <table>
+    <thead>
+      <tr>
+        <th>Veterinario</th>
+        <th>Mascota</th>
+        <th>Fecha y hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @appointments.each do |appointment| %>
+        <tr>
+          <td><%= appointment.vet.name %></td>
+          <td><%= appointment.pet.name %></td>
+          <td><%= appointment.time %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -2,6 +2,7 @@ class Vet < ApplicationRecord
   belongs_to :veterinary
   has_many :records
   has_many :pets, through: :records
+  has_many :appointments
   # Ataching a img
   has_one_attached :photo
   # Include default devise modules. Others available are:
