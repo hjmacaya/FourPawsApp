@@ -1,9 +1,13 @@
-<h1>Estas son las mascotas que has atendido, <%= current_vet.name %></h1>
-<div class="d-flex gap-5">
+<div class="text-center my-4 border">
+  <h1>Estas son las mascotas que has atendido, <%= current_vet.name %></h1>
+
+</div>
+
+<div class="pets-cards">
   <% @pets.each do |pet| %>
     <%= link_to pet_path(pet) do %>
-      <div class="card shadow" style="width: 200px;">
-        <%= cl_image_tag pet.photo.key, :height => 250, :crop => "fill", class: "card-img-top" %>
+      <div class="pet-card card shadow">
+        <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
         <div class="card-body">
         <div class="pet-body">
           <h5 class="card-title"><%= pet.name %></h5>
