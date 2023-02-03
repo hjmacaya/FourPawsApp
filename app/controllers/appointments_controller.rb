@@ -12,6 +12,8 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @pets = current_owner.pets
     @vet = Vet.find(params[:vet_id])
+    @veterinary = @vet.veterinary
+    @vets = @veterinary.vets
   end
 
   def create
@@ -22,6 +24,15 @@ class AppointmentsController < ApplicationController
       redirect_to @appointment
     else
       render :new
+    end
+
+    def taken?(date, hour)
+      @vet = Vet.find(params[:vet_id])
+      taken = false
+      @vet.appointments.each do |appointment|
+        taken = true if appointment.date == datetime
+      end
+      return taken
     end
   end
 

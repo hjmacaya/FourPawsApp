@@ -1,21 +1,32 @@
-<div class="appointments" data-controller="calendar">
-  <div class="carta veterinario">
-    <%= @vet.name %>
+<div class="container">
+<%= simple_form_for @appointment do |f| %>
+  <div class="d-flex">
+    <%= f.input :date, as: :date %>
+    <%= f.select :hour, collection: [ "9:00", "10:00" ] %>
   </div>
-
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md-6 offset-lg-3">
-        <div class="bg-white rounded p-3 shadow container-edit">
-          <h3>Reserva de hora</h3>
-          <%= simple_form_for @appointment, data: { controller: 'flatpickr' } do |f| %>
-            <%= f.select :pet_id, collection: @pets.map{|pet| [pet.name, pet.id]} %>
-            <%= f.input :date %>
-            <%= f.select :hour, collection: [ "09:00-10:00", "10:00-11:00" ] %>
-            <%= f.submit 'Reservar hora', class: "btn btn-primary" %>
-          <% end %>
+  <%= f.label :pet %>
+  <div class="vets_container">
+    <% @vets.each do |vet| %>
+      <div class="card">
+        <%= cl_image_tag vet.photo.key %>
+        <div class="card-body">
+          <h5 class="card-title"><%= vet.name %></h5>
+          <%= radio_button_tag "appointment[vet_id]", vet.id %>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
+  <div class="vets_container">
+    <% @pets.each do |pet| %>
+      <div class="card">
+        <%= cl_image_tag pet.photo.key %>
+        <div class="card-body">
+          <h5 class="card-title"><%= pet.name %></h5>
+          <%= radio_button_tag "appointment[pet_id]", pet.id %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= f.submit "Create Appointment" %>
+<% end %>
 </div>

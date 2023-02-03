@@ -15,14 +15,11 @@
 .appointments {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1em;
-  justify-content: space-around;
   align-items: center;
 }
 
 .carta {
   border: 5px solid black;
-  margin: 2em;
   padding: 5em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
