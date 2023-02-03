@@ -1,6 +1,7 @@
 class OwnerPagesController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :authenticate_owner!
+
   def owner_home
   end
 
@@ -22,5 +23,9 @@ class OwnerPagesController < ApplicationController
       taken = true if appointment.start_time == datetime
     end
     return taken
+  end
+
+  def show_pets
+    @pets = current_owner.pets
   end
 end

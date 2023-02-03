@@ -1,0 +1,26 @@
+.owner-pets-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+  a {
+    width: fit-content;
+    transition: 0.5s linear;
+  }
+
+  a:hover {
+    transform: scale(1.075);
+  }
+}
+
+@media(max-width: 992px) {
+  .owner-pets-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .owner-pets-cards {
+    grid-template-columns: 1fr;
+  }
+}

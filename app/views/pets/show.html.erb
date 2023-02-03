@@ -11,6 +11,9 @@
           <li><button data-action="click->pet-show#open", data-info-data="records", class="button1">Registros</button></li>
           <li><button data-action="click->pet-show#open", data-info-data="appointments", class="button1">Citas</button></li>
           <li><button data-action="click->pet-show#open", data-info-data="notifications", class="button1">Notificaciones</button></li>
+          <% if current_owner.pets.includes(@pet) %>
+            <li> <%= button_to "Eliminar", @pet, method: :delete, data: { confirm: "¿Estas seguro que quieres eliminar a #{@pet.name} de tus mascotas?" }, class: "button-delete"  %> </li>
+          <% end %>
         </ul>
       </div>
       <div>
