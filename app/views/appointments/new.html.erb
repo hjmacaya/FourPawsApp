@@ -9,9 +9,10 @@
         <div class="bg-white rounded p-3 shadow container-edit">
           <h3>Reserva de hora</h3>
           <%= simple_form_for @appointment, data: { controller: 'flatpickr' } do |f| %>
-            <%= f.input :start_time, as: :datetime, input_html: { data: { flatpickr_target: "startTime" } } %>
-            <%= f.input :end_time, as: :datetime, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_Time'  } %>
-            <%= f.submit 'Reservar hora', class: "btn-newgame" %>
+            <%= f.select :pet_id, collection: @pets.map{|pet| [pet.name, pet.id]} %>
+            <%= f.input :date %>
+            <%= f.select :hour, collection: [ "09:00-10:00", "10:00-11:00" ] %>
+            <%= f.submit 'Reservar hora', class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>

@@ -10,11 +10,14 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
-    @vet = Vet.find(params[:vet])
+    @pets = current_owner.pets
+    @vet = Vet.find(params[:vet_id])
   end
 
   def create
     @appointment = Appointment.new(appointment_params)
+    @appointment.vet_id = params[:vet_id]
+
     if @appointment.save
       redirect_to @appointment
     else
@@ -25,6 +28,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:time, :doctor_id, :patient_id)
+    params.require(:appointment).permit(:start_time, :end_time, :pet_id, :vet_id)
   end
 end
