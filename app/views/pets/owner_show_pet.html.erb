@@ -1,0 +1,64 @@
+<div class="show-pet-container">
+
+  <div class="row my-4">
+
+    <div class="col-12 col-lg-8 offset-lg-2 bg-light py-4">
+
+      <div class="d-flex flex-column">
+
+        <div class="d-flex flex-row justify-content-start mx-3 gap-4">
+
+          <%# Pet img %>
+          <%= cl_image_tag @pet.photo.key, class: "show-pet-img" %>
+
+          <%# Pet Info %>
+          <div class="show-pet-info-content">
+
+            <h3 class="show-pet-title"> <%= @pet.name %> </h3>
+
+            <ul class="pet-info-container">
+              <li class="show-pet-info"> <strong> Edad: </strong> <%= @age_years %> años con <%= @age_months %> meses </li>
+              <li class="show-pet-info"> <strong> Peso: </strong> <%= @pet.weight %> Kg </li>
+              <li class="show-pet-info"> <strong> Chip </strong> <%= @pet.pet_chip %> Kg </li>
+              <li class="show-pet-info last-item"> <strong> Tipo: </strong> <%= @pet.animal_type.animal_type %> </li>
+            </ul>
+
+            <div class="d-flex justify-content-start gap-4">
+              <%= link_to "Editar", edit_pet_path(@pet), class: "owner-btn" %>
+              <%= button_to "Eliminar", @pet, method: :delete, data: { confirm: "¿Estas seguro que quieres eliminar a #{@pet.name} de tus mascotas?" }, class: "owner-btn" %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-12 col-lg-8 offset-lg-2 bg-light py-4">
+
+      <%# Pet medical history & Appointments & Other options %>
+      <div class="show-pet-btn-group">
+        <%= link_to "Registros", show_pet_records_path(@pet) %>
+        <%= link_to "Citas", show_owner_pets_path %>
+        <%= link_to "Opciones", show_owner_pets_path %>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-12 col-lg-8 offset-lg-2 bg-light py-4">
+      <%= yield %>
+    </div>
+
+  </div>
+
+</div>

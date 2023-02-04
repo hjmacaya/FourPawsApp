@@ -43,4 +43,7 @@ Rails.application.routes.draw do
   get 'show_owner_pets', to: 'owner_pages#show_pets'
 
   resources :pets, only: %i[new create destroy]
+
+  get 'owner_show_pet/:id', to: 'pets#owner_show_pet', as: 'owner_show_pet'
+  get 'show_pet_records/:id', to: 'pets#show_pet_records', as: 'show_pet_records'
 end
