@@ -1,5 +1,12 @@
+<script>
+  AOS.init();
+</script>
 <div class="container">
-  <%= @appointments.e%>
-  <div class="appointment">
-  </div>
+  <% @appointments.each do |appointment|%>
+    <%= link_to appointment_path(appointment) do %>
+      <div class="appointment" style="padding: 1em 3em" data-aos="fade-up">
+        <h3><%= appointment.pet.name %>, <%= appointment.date %> </h3>
+      </div>
+    <% end %>
+  <% end %>
 </div>

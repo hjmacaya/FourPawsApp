@@ -1,3 +1,6 @@
+<script>
+  AOS.init();
+</script>
 <% if current_vet %>
 <div></div>
 <% else %>
@@ -18,13 +21,13 @@
         </div>
     </nav> %>
     <!-- Page Content-->
-    <div class="container px-4 px-lg-5">
+      <div class="container px-4 px-lg-5">
         <!-- Heading Row-->
         <div class="row gx-4 gx-lg-5 align-items-center my-5">
             <div class="homeimg col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://i.postimg.cc/TPgKzgTg/1610061974-FOUR-PAWS-1-removebg-preview.png" alt="..." /></div>
             <div class="col-lg-5">
-              <h1 class="font-weight-light">¿Que es Four Paws?</h1>
-                <p class="ppaws">FourPaws nace con la finalidad de contar con toda la historia clinica de tu mascota en un solo lugar. Esto permitira tener todos los detalles al alcance de tu mano, como asi tambien la posibilidad de ofrecerle a la veterinaria que desees la informacion de tu mascota.</p>
+              <h1 class="font-weight-light">¿Qué es Four Paws?</h1>
+                <p class="ppaws">FourPaws nace con la finalidad de contar con toda la historia clinica de tu mascota en un solo lugar. Esto permitirá tener todos los detalles al alcance de tu mano, como asi también la posibilidad de ofrecerle a la veterinaria que desees la información de tu mascota.</p>
                 <a class="btn btn-primary" href="#!">Saber más</a>
             </div>
         </div>
@@ -33,42 +36,32 @@
             <div class="card-body1"><p class="text-white m-0">Características fundamentales de FourPaws </p></div>
         </div>
         <!-- Content Row-->
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-4 mb-5">
-                <div class="cardhome h-100">
-                    <div class="card-body">
-                        <h2 class="card-title"></h2>
-                        <p class="card-text">Darse de alta como veterinaria en su formato fisico o como independiente</p>
-                    </div>
-                    <%# <div class="card-footer"><a class="btn btn-primary btn-sm" href="users/sign_up">Veterinario/a</a>
-                      <a class="pets btn btn-primary btn-sm" href="users/sign_up">Mascota</a></div> %>
-                </div>
+        <div class="row d-flex" data-aos="zoom-in-up" style="justify-content: space-between; gap: 5em;">
+          <div class="card" style="width: 18rem;">
+            <img src="https://thumbs.dreamstime.com/b/placa-de-nombre-mascota-con-ilustraci%C3%B3n-del-vector-color-informaci%C3%B3n-icono-signo-s%C3%ADmbolo-aislado-206762435.jpg" class="imagehome" alt="...">
+            <div class="card-body" stlye="text-align: center">
+              <p class="ppaws">Accede como owner y maneja fácil y rápidamente a tus mascotas. ¡Puedes agendar citas y ver sus registros!</p>
             </div>
-            <div class="col-md-4 mb-5">
-                <div class="cardhome h-100">
-                    <div class="card-body">
-                        <h2 class="card-title"></h2>
-                        <p class="card-text">Puedes contar con toda la historia medica de tu mascota en una sola plataforma</p>
-                    </div>
-                    <%# <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div> %>
-                </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://www.euskadi.eus/contenidos/blog_post/blog_2017_12_5/es_def/images/interoperabilidad-age-GobiernoVasco.jpg" class="card-img-top imagehome" alt="...">
+            <div class="card-body" stlye="text-align: center">
+              <p class="ppaws">Lleva el registro de tus animales, ¡los mismos para todas las veterinarias! Mejor información para mejores diagnósticos</p>
             </div>
-            <div class="col-md-4 mb-5">
-                <div class="cardhome h-100">
-                    <div class="card-body">
-                        <h2 class="card-title"></h2>
-                        <p class="card-text">Elije la veterinaria o veterinario que mas te convenga y compartele la informacion de tu mascota a traves del sitio</p>
-                    </div>
-                    <%# <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div> %>
-                </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://img.freepik.com/vector-premium/examen-medico-clinica-veterinaria-vacunacion-atencion-medica-mascotas-como-perros-gatos-dibujos-animados-planos-ilustracion-vectorial-fondo-afiches-o-pancartas_2175-3387.jpg" class="card-img-top imagehome" alt="...">
+            <div class="card-body" stlye="text-align: center">
+              <p class="ppaws">Accede como veterinario y atiende a mascotas con una interfaz profesional. Maneja registros anteriores y gestiona nuevas citas</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer-->
-
 </body>
 <% end %>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>

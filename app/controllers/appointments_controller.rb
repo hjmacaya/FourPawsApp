@@ -4,7 +4,9 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.all
     @owner_appointments = []
     @appointments.each do |appointment|
-      unless owner_appointments.includes?(appointment) || 
+      unless @owner_appointments.include?(appointment) && current_owner != appointment.pet.owner
+        @owner_appointments.append(appointment)
+      end
     end
   end
 
