@@ -15,14 +15,11 @@
 .appointments {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1em;
-  justify-content: space-around;
   align-items: center;
 }
 
 .carta {
   border: 5px solid black;
-  margin: 2em;
   padding: 5em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -35,20 +32,31 @@
   padding: 1em 0;
 
 }
- .horas {
-  display: flex;
-  flex-direction: column;
- }
-.horas .horasi {
-  border: 2px solid black;
-  padding: 1em 3em;
-  margin: 1em 0;
-  background-color: green;
+
+.appointment {
+  text-align: center;
+  height: auto;
+  padding: 3em 0;
+  margin: 4em 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #EFFBF9;
 }
 
-.horas .horano {
-  border: 2px solid black;
-  padding: 1em 3em;
-  margin: 1em 0;
-  background-color: red;
+.appointment p {
+  text-align: center;
+  border: 5px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 1em 1em;
+  margin: 2em 19em;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: var(--terciary-color);
+
+}
+
+.appointment h1 {
+  margin-bottom: 1em;
+  font-family: cursive;
 }
