@@ -134,36 +134,3 @@ p {
 .cardfield {
   margin-left: 20px;
 }
-
-.pets-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-
-  a {
-    width: fit-content;
-  }
-}
-
-@media(max-width: 992px) {
-  .pets-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 768px) {
-  .pets-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-.pet-card {
-  width: 200px;
-  height: auto;
-}
-
-.img-pet-card {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
