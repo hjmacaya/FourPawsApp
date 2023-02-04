@@ -43,25 +43,43 @@
 
 .show-pet-btn-group  {
   width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
   // background-color: aqua;
   // border: 1px solid black;
 }
 
-.show-pet-btn-group a {
+.show-pet-btn-group button {
   background-color: var(--forth-color);
   color: var(--sixth-color);
   padding: 10px 24px;
   float: left;
-  width: 33.3%;
+  width: 50%;
   text-align: center;
+
+  border: none;
 
   transition: 0.4s;
 }
 
-.show-pet-btn-group a:not(:last-child) {
+.show-pet-btn-group button:not(:last-child) {
   border-right: 1px solid #282A3A;
 }
 
-.show-pet-btn-group a:hover {
+.show-pet-btn-group button:hover {
   background-color: var(--fifth-color);
+}
+
+.owner-pet-show-icon {
+  color: red;
+  border: none;
+  background: none;
+  transition: 0.4s;
+  margin-bottom: 7px;
+  // padding: 0;
+  align-self: center;
+}
+
+.owner-pet-show-icon:hover {
+  opacity: 50%;
 }

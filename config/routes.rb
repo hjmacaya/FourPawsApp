@@ -46,4 +46,6 @@ Rails.application.routes.draw do
 
   get 'owner_show_pet/:id', to: 'pets#owner_show_pet', as: 'owner_show_pet'
   get 'show_pet_records/:id', to: 'pets#show_pet_records', as: 'show_pet_records'
+  get 'vet_show_pet/:id', to: 'pets#vet_show_pet', as: 'vet_show_pet'
+
 end
