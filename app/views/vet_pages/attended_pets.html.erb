@@ -1,8 +1,6 @@
 <div class="text-center my-4">
   <h1>Estas son las mascotas que has atendido, <%= current_vet.name %></h1>
-
 </div>
-
 <div class="owner-pets-cards">
   <% @pets.each do |pet| %>
     <%= link_to pet_path(pet) do %>
