@@ -1,0 +1,45 @@
+.vet-show-pet-btn-group  {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  // background-color: aqua;
+  // border: 1px solid black;
+}
+
+.vet-show-pet-btn-group button {
+  background-color: var(--primary-color);
+  color: var(--terciary-color);
+  padding: 10px 24px;
+  float: left;
+  width: 33.3%;
+  text-align: center;
+
+  border: none;
+
+  transition: 0.4s;
+}
+
+.vet-show-pet-btn-group a {
+  background-color: var(--primary-color);
+  color: var(--terciary-color);
+  padding: 10px 24px;
+  float: left;
+  width: 33.3%;
+  text-align: center;
+
+  border: none;
+
+  transition: 0.4s;
+}
+
+.vet-show-pet-btn-group button {
+  border-right: 1px solid #282A3A;
+}
+
+.vet-show-pet-btn-group button:hover {
+  background-color: var(--secondary-color);
+}
+
+.vet-show-pet-btn-group a:hover {
+  background-color: var(--secondary-color);
+}

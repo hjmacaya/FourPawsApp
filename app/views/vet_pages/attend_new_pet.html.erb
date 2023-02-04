@@ -14,18 +14,18 @@
     </div>
   </nav>
 </div>
-<div class="container justify-content-evenly">
-  <div class="pets-cards">
+
+  <div class="owner-pets-cards">
     <% @pets.each do |pet| %>
-      <%= link_to pet_path(pet) do %>
-        <div class="card shadow pet-card">
+      <%= link_to vet_show_pet_path(pet) do %>
+        <div class="pet-card shadow bg-light mb-3 text-center">
           <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= pet.name %></h5>
-            <p>Dueño: <%= pet.owner.name %></p>
+          <div class="pet-card-body">
+            <h5 class="pet-card-title"><%= pet.name %></h5>
+            <p class="pet-card-text">Es un <%= pet.animal_type.animal_type.downcase %> que tiene <%= ((Date.today - pet.birthdate)/365).to_i %> años. Pertenece a <%= "#{pet.owner.name} #{pet.owner.last_name}" %></p>
           </div>
         </div>
       <% end %>
     <% end %>
-  </div>
+
 </div>
