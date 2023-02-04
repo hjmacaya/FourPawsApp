@@ -3,7 +3,7 @@
 </div>
 <div class="owner-pets-cards">
   <% @pets.each do |pet| %>
-    <%= link_to pet_path(pet) do %>
+    <%= link_to vet_show_pet_path(pet) do %>
       <div class="pet-card shadow bg-light mb-3 text-center">
         <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
         <div class="pet-card-body">

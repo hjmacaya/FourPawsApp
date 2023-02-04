@@ -64,6 +64,8 @@ class PetsController < ApplicationController
     end
     @age_months = age_months
     @age_years = age_years
+
+    @appointments = @pet.appointments
   end
 
   def show_pet_records

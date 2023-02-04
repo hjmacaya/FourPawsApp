@@ -44,7 +44,7 @@
                 <th scope="col">Fecha</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Registro</th>
-                <th scope="col">Veterinario</th>
+                <th scope="col">Veterinaria</th>
               </tr>
             </thead>
             <tbody>
@@ -53,7 +53,7 @@
                   <td> <%= record.date %> </td>
                   <td> <%= record.record_type.record_type %> </td>
                   <td> <%= record.name %> </td>
-                  <td> <%= record.vet.name %> </td>
+                  <td> <%= record.vet.veterinary.name %> </td>
                   <td> <%= link_to "Ver", record_path(record), class: "btn btn-primary" %> </td>
                 </tr>
               <% end %>

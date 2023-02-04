@@ -5,7 +5,7 @@
       <div class="card-body text-center">
         <h2 class="card-title"><%= veterinary.name %></h2>
         <p class="card-text fs-5 text-center"><%= veterinary.address %></p>
-        <%= link_to "Seleccionar", new_appointment_2_path(veterinary: veterinary), class: "button1 mx-auto" %>
+        <%= link_to "Seleccionar", new_appointment_path(veterinary_id: veterinary.id), class: "button1 mx-auto" %>
       </div>
     </div>
   <% end %>

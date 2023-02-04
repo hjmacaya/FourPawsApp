@@ -17,8 +17,8 @@ class AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
     @pets = current_owner.pets
-    @vet = Vet.find(params[:vet_id])
-    @veterinary = @vet.veterinary
+    # @vet = Vet.find(params[:vet_id])
+    @veterinary = Veterinary.find(params[:veterinary_id])
     @vets = @veterinary.vets
     @hours = []
     8.times do |i|
