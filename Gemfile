@@ -68,7 +68,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem "dotenv-rails"
 
 end
 
@@ -78,3 +77,12 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Cloudinary for images
+gem "cloudinary"
+
+# Search
+gem "pg_search"
+
+# Calendar
+gem "simple_calendar", "~> 2.4"

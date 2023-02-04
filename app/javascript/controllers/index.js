@@ -4,8 +4,20 @@
 
 import { application } from "./application"
 
+import CalendarController from "./calendar_controller"
+application.register("calendar", CalendarController)
+
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import OwnerPetShowController from "./owner_pet_show_controller"
+application.register("owner-pet-show", OwnerPetShowController)
+
+import OwnerSidebarButtonsController from "./owner_sidebar_buttons_controller"
+application.register("owner-sidebar-buttons", OwnerSidebarButtonsController)
 
 import OwnerSignupController from "./owner_signup_controller"
 application.register("owner-signup", OwnerSignupController)
@@ -16,5 +28,14 @@ application.register("pet-show", PetShowController)
 import SidebarButtonsController from "./sidebar_buttons_controller"
 application.register("sidebar-buttons", SidebarButtonsController)
 
+import VetEditController from "./vet_edit_controller"
+application.register("vet-edit", VetEditController)
+
+import VetPetShowController from "./vet_pet_show_controller"
+application.register("vet-pet-show", VetPetShowController)
+
 import VetSignupController from "./vet_signup_controller"
 application.register("vet-signup", VetSignupController)
+
+import VeterinaryViewController from "./veterinary_view_controller"
+application.register("veterinary-view", VeterinaryViewController)

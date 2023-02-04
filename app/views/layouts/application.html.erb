@@ -8,16 +8,20 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body style = "background-image: linear-gradient(rgba(240,240,240,0.96),rgba(240,240,240,0.96 )),url(https://thumbs.dreamstime.com/b/modelo-incons%C3%BAtil-de-la-cl%C3%ADnica-veterinaria-124775629.jpg)";>
     <% if current_vet %>
       <%= render "shared/vet_sidebar" %>
+    <% elsif current_owner %>
+      <%= render "shared/owner_sidebar" %>
     <% else %>
       <%= render "shared/navbar" %>
+      <%= render "shared/flashes" %>
+      <%= yield %>
     <% end %>
-    <%= render "shared/flashes" %>
-    <%= yield %>
   </body>
     <%= render "shared/footer" %>
 </html>

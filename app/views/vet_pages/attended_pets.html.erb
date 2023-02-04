@@ -1,0 +1,16 @@
+<div class="text-center my-4">
+  <h1>Estas son las mascotas que has atendido, <%= current_vet.name %></h1>
+</div>
+<div class="owner-pets-cards">
+  <% @pets.each do |pet| %>
+    <%= link_to vet_show_pet_path(pet) do %>
+      <div class="pet-card shadow bg-light mb-3 text-center">
+        <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
+        <div class="pet-card-body">
+          <h5 class="pet-card-title"><%= pet.name %></h5>
+          <p class="pet-card-text"> Es un <%= pet.animal_type.animal_type.downcase %> que tiene <%= ((Date.today - pet.birthdate)/365).to_i %> años. Pertenece a <%= "#{pet.owner.name} #{pet.owner.last_name}" %> </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

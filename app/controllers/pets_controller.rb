@@ -49,12 +49,46 @@ class PetsController < ApplicationController
   def destroy
     @pet = Pet.find(params[:id])
     @pet.destroy
-    redirect_to pets_path
+    redirect_to show_owner_pets_path
+  end
+
+  def owner_show_pet
+    @pet = Pet.find(params[:id])
+    birthdate = @pet.birthdate
+    today = Date.today
+    age_years = today.year - birthdate.year
+    age_months = today.month - birthdate.month
+    if age_months.negative?
+      age_years -= 1
+      age_months = 12 - age_months.abs
+    end
+    @age_months = age_months
+    @age_years = age_years
+
+    @appointments = @pet.appointments
+  end
+
+  def show_pet_records
+    @pet = Pet.find(params[:id])
+  end
+
+  def vet_show_pet
+    @pet = Pet.find(params[:id])
+    birthdate = @pet.birthdate
+    today = Date.today
+    age_years = today.year - birthdate.year
+    age_months = today.month - birthdate.month
+    if age_months.negative?
+      age_years -= 1
+      age_months = 12 - age_months.abs
+    end
+    @age_months = age_months
+    @age_years = age_years
   end
 
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :birthdate, :weight, :pet_chip, :animal_type_id, records_attributes: [:name, :observation, :date, :record_type])
+    params.require(:pet).permit(:name, :birthdate, :weight, :pet_chip, :photo, :animal_type_id, records_attributes: [:name, :observation, :date, :record_type])
   end
 end

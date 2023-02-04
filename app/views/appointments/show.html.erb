@@ -1,0 +1,16 @@
+<div class="container d-flex text-center align-items-center">
+  <div>
+
+  </div>
+  <div class="appointment col-3">
+    <h1>Próxima cita de <%= @appointment.pet.name %></h1>
+    <h3>Nombre del veterinario/a</h3>
+    <p><%= @appointment.vet.name %></p>
+    <h3>Fecha de la cita</h3>
+    <p><%= @appointment.date %></p>
+    <h3>Hora de la cita</h3>
+    <p><%= @appointment.hour %></p>
+    <h3>Dirección de <%= @appointment.vet.veterinary.name %></h3>
+    <p><%= @appointment.vet.veterinary.address %></p>
+  </div>
+</div>

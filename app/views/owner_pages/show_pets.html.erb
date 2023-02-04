@@ -1,0 +1,20 @@
+<div class="container text-center my-4">
+<div class="d-flex flex-row justify-content-between mt-3 mb-5">
+  <h3 class=""> Mis mascotas: </h3>
+  <%= link_to "Añadir mascota", new_pet_path, class: "btn owner-btn" %>
+</div>
+  <div class="owner-pets-cards">
+    <% @pets.each do |pet| %>
+      <%= link_to owner_show_pet_path(pet) do %>
+        <div class="pet-card shadow bg-light mb-3">
+          <%= cl_image_tag pet.photo.key, class: "img-pet-card" %>
+          <div class="pet-card-body">
+            <h5 class="pet-card-title"><%= pet.name %></h5>
+            <p class="pet-card-text">Es un <%= pet.animal_type.animal_type.downcase %> que tiene <%= ((Date.today - pet.birthdate)/365).to_i %> años.</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

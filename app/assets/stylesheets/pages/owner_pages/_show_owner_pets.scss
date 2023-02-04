@@ -1,0 +1,42 @@
+.owner-pets-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+  a {
+    width: fit-content;
+    transition: 0.5s linear;
+  }
+
+  a:hover {
+    transform: scale(1.075);
+  }
+}
+
+@media(max-width: 992px) {
+  .owner-pets-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .owner-pets-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.owner-btn {
+  color: var(--sixth-color);
+  background-color: var(--forth-color);
+  padding: 0px 10px;
+  text-align: center;
+  border-radius: 8px;
+
+  height: 40px;
+  line-height: 40px;
+}
+
+.owner-btn:hover {
+  color: var(--sixth-color);
+  background-color: var(--fifth-color);
+}

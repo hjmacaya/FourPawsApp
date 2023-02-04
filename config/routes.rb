@@ -22,18 +22,30 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get 'veterinaries/index', to: 'veterinaries#index'
+  resources :veterinaries, only: %i[index show]
   get 'record_types/index', to: 'record_types#index'
   get 'animal_types/index', to: 'animal_types#index'
   resources :pets do
     resources :records, only: %i[new create]
   end
-  resources :records, only: %i[show index]
+  resources :records, only: %i[show index edit update destroy]
 
   get 'vet_home', to: 'vet_pages#vet_home'
   get 'attend_new_pet', to: 'vet_pages#attend_new_pet'
+  get 'attended_pets', to: 'vet_pages#attended_pets'
+  get 'show_vets', to: 'vet_pages#show_vets'
+  get 'show_all_pets', to: 'vet_pages#show_all_pets'
+
+  resources :appointments
+  get 'new_appointment_1', to: 'owner_pages#new_appointment_1'
+  get 'new_appointment_2/:veterinary', to: 'owner_pages#new_appointment_2', as: "new_appointment_2"
+
+  get 'show_owner_pets', to: 'owner_pages#show_pets'
+
+  resources :pets, only: %i[new create destroy]
+
+  get 'owner_show_pet/:id', to: 'pets#owner_show_pet', as: 'owner_show_pet'
+  get 'show_pet_records/:id', to: 'pets#show_pet_records', as: 'show_pet_records'
+  get 'vet_show_pet/:id', to: 'pets#vet_show_pet', as: 'vet_show_pet'
 
 end
-#Preguntas para siguiente clase: ¿Será necesario nestear rutas de vets en veterinaries?
-#¿Y nestear pets dentro de owners? Yo creo que sí.
-#¿Nestear records dentro de record_types?

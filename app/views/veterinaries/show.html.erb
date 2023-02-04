@@ -1,0 +1,89 @@
+<div class="container">
+  <h1 style="font-size: 80px;"><%= @veterinary.name %></h1>
+</div>
+<div data-controller="veterinary-view">
+  <div class="card text-center">
+    <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs" style="flex-wrap: nowrap;">
+      <li class="nav-item">
+        <a class="nav-link active" style="cursor: pointer;" data-action="click->veterinary-view#open" data-info-data="personal" data-veterinary-view-target="button">Nuestro personal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor: pointer;" data-action="click->veterinary-view#open" data-info-data="registros" data-veterinary-view-target="button">Registros de la veterinaria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor: pointer;" data-action="click->veterinary-view#open" data-info-data="mascotas" data-veterinary-view-target="button">Mascotas de la veterinaria</a>
+      </li>
+    </ul>
+    </div>
+  <div class="card-body" data-veterinary-view-target="personal" id="personal">
+    <h1 class="card-title" style="text-align: left;">Personal</h1>
+    <h3 class="card-title">Personal de nuestra veterinaria</h3>
+    <div class="contianer m-3">
+      <div class="d-flex flex-row flex-wrap justify-content-center gap-3">
+        <% @veterinary.vets.each do |vet| %>
+          <div class="card" style="width: 18rem;">
+            <%= cl_image_tag vet.photo.key, :height => 250, :crop => "fill", class: "card-img-top"%>
+            <div class="card-body">
+              <h5 class="card-title"><%= vet.name %></h5>
+              <p>Trabaja en <strong style="color: black"><%= vet.veterinary.name %></strong> en el área de <strong style="color: black"><%= vet.specialty %></strong></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card-body d-none" data-veterinary-view-target="mascotas" id="mascotas">
+  <h1 class="card-title" style="text-align: left;">Mascotas</h1>
+  <h3 class="card-title">Mascotas de la veterinaria</h3>
+  <div class="pets_container">
+    <% @veterinary_pets.each do |pet| %>
+      <%= link_to pet_path(pet) do %>
+        <div class="card shadow">
+          <%= cl_image_tag pet.photo.key, height: 250, style: "object-fit: cover;"%>
+          <div class="card-body">
+            <h5 class="card-title"><%= pet.name %></h5>
+            <p>Dueño: <%= pet.owner.name %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  </div>
+  <div class="card-body d-none" data-veterinary-view-target="registros" id="registros">
+  <h1 style="text-align: left;">Registros</h1>
+  <% if current_vet %>
+    <h2>Registros de <%= @veterinary.name %></h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Pet</th>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Date</th>
+          <th scope="col"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @records.each_with_index do |record, index|  %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= record.pet.name %></td>
+            <td><%= record.name %></td>
+            <td><%= record.record_type.record_type %></td>
+            <td><%= record.date %></td>
+            <td><%= link_to "Ver", record_path(record) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h1>You are not logged in as an Vet!</h1>
+    <div class="alert alert-primary" role="alert">
+    You are not logged in as an Vet!
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>

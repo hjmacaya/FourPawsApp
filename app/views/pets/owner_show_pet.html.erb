@@ -1,0 +1,105 @@
+<div class="show-pet-container">
+
+  <div class="row my-4" data-controller="owner-pet-show">
+
+    <div class="col-12 col-lg-8 offset-lg-2 bg-light py-4">
+
+      <div class="d-flex flex-column">
+
+        <div class="d-flex flex-row justify-content-start mx-3 gap-4">
+
+          <%# Pet img %>
+          <%= cl_image_tag @pet.photo.key, class: "show-pet-img" %>
+
+          <%# Pet Info %>
+          <div class="show-pet-info-content">
+
+            <div class="d-flex align-items-center gap-2">
+              <h3 class="show-pet-title"> <%= @pet.name %> </h3>
+              <%= button_to raw("<i class=\"fa-solid fa-trash-can fa-lg\"></i>"),
+                  @pet,
+                  method: :delete,
+                  data: { confirm: "¿Estas seguro que quieres eliminar a #{@pet.name} de tus mascotas?" },
+                  class: "owner-pet-show-icon"%>
+            </div>
+
+
+            <ul class="pet-info-container">
+              <li class="show-pet-info"> <strong> Edad: </strong> <%= @age_years %> años con <%= @age_months %> meses </li>
+              <li class="show-pet-info"> <strong> Peso: </strong> <%= @pet.weight %> Kg </li>
+              <li class="show-pet-info"> <strong> Chip </strong> <%= @pet.pet_chip %> </li>
+              <li class="show-pet-info last-item"> <strong> Tipo: </strong> <%= @pet.animal_type.animal_type %> </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <%# Pet medical history & Appointments & Other options %>
+        <div class="show-pet-btn-group">
+          <button data-action="click->owner-pet-show#open"
+                  data-info-data="records-2"> Registros </button>
+          <button data-action="click->owner-pet-show#open"
+                  data-info-data="appointments-2"> Citas </button>
+          <%# <button data-action="click->owner-pet-show#open"
+                  data-info-data="options-2"> Opciones </button> %>
+        </div>
+
+        <%# Records %>
+        <div id="records-2" data-owner-pet-show-target="records" class="d-none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Registro</th>
+                <th scope="col">Veterinario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @pet.records.each_with_index do |record, index| %>
+                <tr>
+                  <td> <%= record.date %> </td>
+                  <td> <%= record.record_type.record_type %> </td>
+                  <td> <%= record.name %> </td>
+                  <td> <%= record.vet.name %> </td>
+                  <td> <%= link_to "Ver", record_path(record), class: "btn btn-primary" %> </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+        <%# Appointments %>
+        <div id="appointments-2" data-owner-pet-show-target="appointments" class="d-none">
+          <script>
+            AOS.init();
+          </script>
+          <div class="container">
+            <% @appointments.each do |appointment|%>
+              <%= link_to appointment_path(appointment) do %>
+                <div class="appointment" style="padding: 1em 3em;" data-aos="fade-up">
+                  <h3><%= appointment.pet.name %>, <%= appointment.date %> </h3>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
+        <%# Options %>
+        <div id="options-2" data-owner-pet-show-target="options" class="d-none">
+          <div class="d-flex">
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,14 +1,14 @@
 .wrapper {
   display: flex;
   width: 100%;
-  align-items: stretch;
 }
 
 .vet-home-img {
   border-radius: 50%;
-  size: cover;
   width: 150px;
+  height: 150px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 #sidebar.active {
@@ -90,12 +90,15 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    background: var(--primary-color);
-    color: var(--terciary-color);
-    transition: all 0.3s;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  background: var(--primary-color);
+  color: var(--terciary-color);
+  transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
@@ -143,3 +146,12 @@ ul ul a {
 .sidebar-icon:hover {
   opacity: 50%;
 }
+
+.active-sidebar {
+  color: var(--primary-color);
+  background: var(--terciary-color);
+}
+
+// #content {
+//   margin-left: 250px;
+// }

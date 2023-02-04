@@ -1,2 +1,14 @@
-<h1>Records#show</h1>
-<p>Find me in app/views/records/show.html.erb</p>
+<div class="container">
+  <h1>Registro Médico de <%= @pet.name %> </h1>
+  <div class="card" style="padding: 2em;">
+    <h4><u>Nombre:</u> <p><%= @record.name %></p></h4>
+    <h5><u>Fecha:</u> <p><%= @record.date %></p></h5>
+    <h5><u>Observación:</u> <p><%= @record.observation %></p></h5>
+    <p>Registro creado por <%= @record.vet.name %>, de la veterinaria <%= @record.vet.veterinary.name %></p>
+  </div>
+  <div>
+  <% if current_vet && @record.vet == current_vet %>
+    <%= link_to "Editar", edit_record_path(@record), class:"btn btn-danger mt-4" %>
+  <% end %>
+  </div>
+</div>

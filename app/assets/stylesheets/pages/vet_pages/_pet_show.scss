@@ -14,7 +14,7 @@
   width: 150px; /* Ancho de la imagen */
   height: 150px; /* Altura de la imagen */
   object-fit: cover; /* Ajusta la imagen al tamaño especificado */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin-left: 100px;
 }
 .section1 {
   list-style: none;
@@ -27,7 +27,7 @@
   margin: 5px;
 }
 .button1{
-  background-color: #4CAF50; /* Color de fondo */
+  background-color: var(--primary-color); /* Color de fondo */
   color: white; /* Color del texto */
   padding: 14px 20px; /* Espaciado interno */
   margin: 8px 0; /* Espaciado externo */
@@ -37,8 +37,17 @@
   font-size: 18px; /* Tamaño de la fuente */
   border-radius: 10px;
 }
-.button1:active {
-  background-color: #3e8e41;
+
+.button1:hover {
+  color: rgb(38, 0, 255);
+  background-color: rgb(189, 189, 189);
+  //border: 1px solid blue;
+}
+
+.button1:focus {
+  color: blue;
+  background-color: rgb(189, 189, 189);
+  border-bottom: 2px solid black;
 }
 
 p {
@@ -49,4 +58,79 @@ p {
   color: #333; /* Color del texto */
   text-align: justify; /* Alineación del texto */
   margin-bottom: 1em; /* Espaciado debajo del párrafo */
+}
+
+.button2{
+  background-color: var(--primary-color); /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  padding: 14px 20px; /* Espaciado interno */
+  margin-bottom: 10px;
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  font-size: 18px; /* Tamaño de la fuente */
+  border-radius: 10px;
+  float: right;
+}
+
+.button2:hover {
+  color: rgb(38, 0, 255);
+  background-color: rgb(189, 189, 189);
+  //border: 1px solid blue;
+}
+
+.button-delete {
+  background-color: red; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 14px 20px; /* Espaciado interno */
+  margin: 8px 0; /* Espaciado externo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  width: 100%; /* Ancho completo */
+  font-size: 18px; /* Tamaño de la fuente */
+  border-radius: 10px;
+}
+
+.button-delete:hover {
+  opacity: 50%;
+}
+
+.infopet p {
+  color: black;
+}
+
+// .card img {
+//  border-bottom: solid 1px black;
+// }
+
+.pet-body p {
+  color: black;
+  text-align: left
+}
+
+.verinfo {
+  margin-top: -4px;
+}
+
+.verinfo:hover {
+  color: rgb(38, 0, 255);
+  background-color: rgb(189, 189, 189);
+}
+
+// .card {
+//   background: transparent;
+//   // border-radius: 35px 35px 0px 0px;
+//   // -moz-border-radius: 35px 35px 0px 0px;
+//   // -webkit-border-radius: 35px 35px 0px 0px;
+//   border: 2px solid #000000;
+//   // -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+//   // -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+//   // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+// }
+
+// .card h4, h5, h2, p, img{
+//   margin-left: 20px;
+// }
+
+.cardfield {
+  margin-left: 20px;
 }
