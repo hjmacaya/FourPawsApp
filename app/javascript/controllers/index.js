@@ -31,6 +31,9 @@ application.register("sidebar-buttons", SidebarButtonsController)
 import VetEditController from "./vet_edit_controller"
 application.register("vet-edit", VetEditController)
 
+import VetPetShowController from "./vet_pet_show_controller"
+application.register("vet-pet-show", VetPetShowController)
+
 import VetSignupController from "./vet_signup_controller"
 application.register("vet-signup", VetSignupController)
 

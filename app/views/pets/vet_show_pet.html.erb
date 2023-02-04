@@ -1,6 +1,6 @@
 <div class="show-pet-container">
 
-  <div class="row my-4" data-controller="owner-pet-show">
+  <div class="row my-4" data-controller="vet-pet-show">
 
     <div class="col-12 col-lg-8 offset-lg-2 bg-light py-4">
 
@@ -14,15 +14,7 @@
           <%# Pet Info %>
           <div class="show-pet-info-content">
 
-            <div class="d-flex align-items-center gap-2">
-              <h3 class="show-pet-title"> <%= @pet.name %> </h3>
-              <%= button_to raw("<i class=\"fa-solid fa-trash-can fa-lg\"></i>"),
-                  @pet,
-                  method: :delete,
-                  data: { confirm: "¿Estas seguro que quieres eliminar a #{@pet.name} de tus mascotas?" },
-                  class: "owner-pet-show-icon"%>
-            </div>
-
+            <h3 class="show-pet-title"> <%= @pet.name %> </h3>
 
             <ul class="pet-info-container">
               <li class="show-pet-info"> <strong> Edad: </strong> <%= @age_years %> años con <%= @age_months %> meses </li>
@@ -35,17 +27,17 @@
         </div>
 
         <%# Pet medical history & Appointments & Other options %>
-        <div class="show-pet-btn-group">
-          <button data-action="click->owner-pet-show#open"
-                  data-info-data="records-2"> Registros </button>
-          <button data-action="click->owner-pet-show#open"
-                  data-info-data="appointments-2"> Citas </button>
-          <%# <button data-action="click->owner-pet-show#open"
-                  data-info-data="options-2"> Opciones </button> %>
+        <div class="vet-show-pet-btn-group">
+          <button data-action="click->vet-pet-show#open"
+                  data-info-data="records-3"> Registros </button>
+          <button data-action="click->vet-pet-show#open"
+                  data-info-data="appointments-3"> Citas </button>
+          <%= link_to "Crear registro",
+                      new_pet_record_path(@pet) %>
         </div>
 
         <%# Records %>
-        <div id="records-2" data-owner-pet-show-target="records" class="d-none">
+        <div id="records-3" data-vet-pet-show-target="records" class="d-none">
           <table class="table">
             <thead>
               <tr>
@@ -70,13 +62,13 @@
         </div>
 
         <%# Appointments %>
-        <div id="appointments-2" data-owner-pet-show-target="appointments" class="d-none">
+        <div id="appointments-3" data-vet-pet-show-target="appointments" class="d-none">
           Appointments
         </div>
 
 
         <%# Options %>
-        <div id="options-2" data-owner-pet-show-target="options" class="d-none">
+        <div id="options-3" data-vet-pet-show-target="options" class="d-none">
           <div class="d-flex">
 
 
