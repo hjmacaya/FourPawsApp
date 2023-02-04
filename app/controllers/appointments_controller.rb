@@ -2,6 +2,10 @@ class AppointmentsController < ApplicationController
   skip_before_action :authenticate_user!
   def index
     @appointments = Appointment.all
+    @owner_appointments = []
+    @appointments.each do |appointment|
+      unless owner_appointments.includes?(appointment) || 
+    end
   end
 
   def show

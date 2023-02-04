@@ -25,10 +25,10 @@
       </li>
 
       <li>
-        <button type="button"
-                class="owner-sidebar-btn"
-                data-action="click->owner-sidebar-buttons#showView"
-                data-owner-sidebar-buttons-viewToShow-param="mydataView">Citas</button>
+                    <%= link_to "Citas",
+                    appointments_path,
+                    class: "owner-sidebar-btn",
+                    "data-action" => "click->owner-sidebar-buttons#showView" %>
       </li>
 
       <li>
