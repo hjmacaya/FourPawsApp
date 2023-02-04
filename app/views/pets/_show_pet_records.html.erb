@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Registro</th>
+      <th scope="col">Veterinario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pet.records.each_with_index do |record, index| %>
+      <tr>
+        <td> <%= record.date %> </td>
+        <td> <%= record.record_type.record_type %> </td>
+        <td> <%= record.name %> </td>
+        <td> <%= record.vet.name %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

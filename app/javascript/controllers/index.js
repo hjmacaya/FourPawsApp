@@ -13,6 +13,9 @@ application.register("flatpickr", FlatpickrController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import OwnerPetShowController from "./owner_pet_show_controller"
+application.register("owner-pet-show", OwnerPetShowController)
+
 import OwnerSidebarButtonsController from "./owner_sidebar_buttons_controller"
 application.register("owner-sidebar-buttons", OwnerSidebarButtonsController)
 
