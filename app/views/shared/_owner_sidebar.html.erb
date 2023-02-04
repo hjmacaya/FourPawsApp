@@ -1,0 +1,72 @@
+<div class="wrapper" data-controller="owner-sidebar-buttons">
+
+  <%# Sidebar %>
+  <nav id="owner-sidebar">
+
+    <div class="sidebar-header text-center">
+      <%# profile img %>
+      <%= cl_image_tag current_owner.photo.key, crop: "fill", class: "vet-home-img" %>
+      <h3> <%= current_owner.name %> </h3>
+    </div>
+
+    <ul class="list-unstyled components" data-owner-sidebar-buttons-target="btnList">
+      <li>
+        <%= link_to "Mis mascotas",
+                    show_owner_pets_path,
+                    class: "owner-sidebar-btn",
+                    "data-action" => "click->owner-sidebar-buttons#showView" %>
+      </li>
+        <%= link_to "Agendar hora",
+                    new_appointment_1_path,
+                    class: "owner-sidebar-btn",
+                    "data-action" => "click->owner-sidebar-buttons#showView" %>
+      <li>
+
+      </li>
+
+      <li>
+        <button type="button"
+                class="owner-sidebar-btn"
+                data-action="click->owner-sidebar-buttons#showView"
+                data-owner-sidebar-buttons-viewToShow-param="mydataView">Citas</button>
+      </li>
+
+      <li>
+        <button type="button"
+                class="owner-sidebar-btn"
+                data-action="click->owner-sidebar-buttons#showView"
+                data-owner-sidebar-buttons-viewToShow-param="mydataView">Tiendas</button>
+      </li>
+    </ul>
+
+    <div class="d-flex flex-row justify-content-center gap-5 mt-5">
+      <%= link_to raw("<i class=\"fa-solid fa-house fa-lg\"></i>"),
+                  root_path,
+                  class: "sidebar-icon",
+                  "data-bs-toggle" => "tooltip",
+                  "data-bs-title" => "Inicio",
+                  "data-bs-placement" => "top",
+                  "data-action" => "click->owner-sidebar-buttons#showView" %>
+      <%= link_to raw("<i class=\"fa-solid fa-user fa-lg\"></i>"),
+                  edit_vet_registration_path,
+                  class: "sidebar-icon",
+                  "data-bs-toggle"=> "tooltip",
+                  "data-bs-title" => "Cuenta",
+                  "data-bs-placement" => "top",
+                  "data-action" => "click->owner-sidebar-buttons#showView" %>
+      <%= link_to raw("<i class=\"fa-solid fa-arrow-right-from-bracket fa-lg\"></i>"),
+                  destroy_vet_session_path,
+                  data: {turbo_method: :delete},
+                  class: "sidebar-icon",
+                  "data-bs-toggle" => "tooltip",
+                  "data-bs-placement" => "top",
+                  "data-bs-title" => "Cerrar sesión"%>
+    </div>
+
+  </nav>
+
+  <div class="container m-3">
+    <%= yield %>
+  </div>
+
+</div>

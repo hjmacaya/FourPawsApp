@@ -24,3 +24,19 @@
     grid-template-columns: 1fr;
   }
 }
+
+.owner-btn {
+  color: var(--sixth-color);
+  background-color: var(--forth-color);
+  padding: 0px 10px;
+  text-align: center;
+  border-radius: 8px;
+
+  height: 40px;
+  line-height: 40px;
+}
+
+.owner-btn:hover {
+  color: var(--sixth-color);
+  background-color: var(--fifth-color);
+}

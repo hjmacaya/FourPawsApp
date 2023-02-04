@@ -315,6 +315,8 @@ puts "Creating records"
 rec_1 = Record.create(name: "Primera vacuna para Lupe", observation: "Dado que la perrita cumplió los 2 meses de edad, se le vacunó contra la rabia y el parvo", date: Date.new(2020, 7, 15), vet_id: vet_4.id, pet_id: lupe.id, record_type_id: record_type_2.id)
 rec_2 = Record.create(name: "Segunda vacuna para Lupe", observation: "Pasaron 2 meses de la primera vacuna, por lo que le tocó el segundo set de vacunas", date: Date.new(2020, 10, 15), vet_id: vet_4.id, pet_id: lupe.id, record_type_id: record_type_2.id)
 rec_3 = Record.create(name: "Esterilización Lupe", observation: "La perrita ya cumplió 1 años de edad y le llego su primer celo, por lo tanto fue esterilizada", date: Date.new(2021, 7, 15), vet_id: vet_6.id, pet_id: lupe.id, record_type_id: record_type_6.id)
+rec_29  = Record.create(name: "Trauma en la pata de Lupe", observation: "La perrita tiene la pata delantera izquierda esguinzada. Se le recomienda que haga reposo y le den remedios para el dolor.", date: Date.new(2023, 1, 27), vet_id: vet_13.id, pet_id: lupe.id, record_type_id: record_type_8.id)
+
 
 # Bolt
 rec_4 = Record.create(name: "Primera vacuna para Bolt", observation: "Dado que el perrito cumplió los 2 meses de edad, se le vacunó contra la rabia y el parvo", date: Date.new(2020, 7, 15), vet_id: vet_5.id, pet_id: bolt.id, record_type_id: record_type_2.id)
